@@ -14,6 +14,8 @@
     --additional: #F0ECF4;
     --hover-word: #0CB477;
     --underline: #E6E6E6;
+    --bg-input: #8551B9;
+    --placeholder: #c2a8bc;
 }
 
 @font-face {
@@ -87,13 +89,10 @@ main {
     }
 
     .header {
-        position: relative;
         padding: 11px 16px 36px 11px;
         font-size: 20px;
-        font-weight: 700;
         line-height: 24px;
         letter-spacing: 1.5px;
-        text-transform: uppercase;
     }
 
     .header::after {
@@ -237,6 +236,47 @@ main {
     .laptop {
         display: block;
     }
+
+    .header {
+        position: relative;
+        padding: 20px 24px 0px;
+    }
+
+    .bg-btn {
+        width: 47px;
+        height: 47px;
+        padding-right: 5px;
+        border: 1px solid var(--labels);
+        border-radius: 7px;
+    }
+
+    .header-title {
+        flex-shrink: 4;
+        padding-left: 17px;
+        padding-right: 20px;
+        max-width: 155px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .header__search {
+        flex-grow: 2;
+        padding: 0px 19px;
+        background-color: var(--bg-input);
+    }
+    .header__search::placeholder {
+        color: var(--placeholder);
+    }
+
+    .header__search-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 25px;
+        border-radius: 30px;
+        background-color: var(--placeholder);
+    }
 }
 
 /* header */
@@ -245,8 +285,11 @@ main {
 }
 
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 700;
     color: white;
 }
 
