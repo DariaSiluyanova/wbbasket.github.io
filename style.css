@@ -80,6 +80,7 @@ main {
     .mobile {
         display: block;
     }
+
     .laptop {
         display: none;
     }
@@ -93,6 +94,10 @@ main {
         font-size: 20px;
         line-height: 24px;
         letter-spacing: 1.5px;
+    }
+
+    .header__search {
+        align-self: self-end;
     }
 
     .header::after {
@@ -239,14 +244,14 @@ main {
 
     .header {
         position: relative;
-        padding: 20px 24px 0px;
+        padding: 20px 24px 25px;
     }
 
     .bg-btn {
         width: 47px;
         height: 47px;
-        padding-right: 5px;
-        border: 1px solid var(--labels);
+        padding-right: 8px;
+        border: 1px solid var(--placeholder);
         border-radius: 7px;
     }
 
@@ -261,21 +266,42 @@ main {
     }
 
     .header__search {
-        flex-grow: 2;
-        padding: 0px 19px;
-        background-color: var(--bg-input);
+        position: relative;
+        align-self: baseline;
+        flex-grow: 10;
     }
-    .header__search::placeholder {
+
+    .search-input {
+        height: 47px;
+        width: 100%;
+        padding: 0px 19px;
+        font-size: 17px;
+        background-color: var(--bg-input);
+        border-radius: 26px;
+    }
+
+    .search-input::placeholder {
         color: var(--placeholder);
     }
 
     .header__search-icon {
         position: absolute;
-        top: 0;
-        right: 0;
-        height: 25px;
+        top: 12px;
+        right: 20px;
+        height: 23px;
+        width: 25px;
         border-radius: 30px;
-        background-color: var(--placeholder);
+        background-color: inherit;
+    }
+
+    .header__icon-personal {
+        flex-grow: 1;
+    }
+
+    .header__icon-personal {
+        margin-top: -9px;
+        text-align: end;
+        background-color: inherit;
     }
 }
 
