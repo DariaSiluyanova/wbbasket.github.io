@@ -822,33 +822,57 @@
               </div>
             </div>
 
-            <div class="write-off-money">
+            <div class="additional-block__checkbox write-off-money">
               <input
-                class="checkbox"
+                class="checkbox write-off-money__checkbox"
                 type="checkbox"
                 id="writeoffmoney"
                 name="writeoffmoney"
               />
-              <label for="checkbox-label writeoffmoney"
+              <label class="checkbox-label" for="writeoffmoney"
                 >Списать оплату сразу</label
               >
               <div>Спишем оплату с карты при получении</div>
             </div>
           </div>
 
-          <button type="submit">Заказать</button>
-
-          <a href="#">
-            <img src="./images/icons/agree.svg" alt="agree with rules" />
-            Соглашаюсь с правилами пользования торговой площадкой и возврата</a
-          >
+          <button class="order additional-block__btn" type="submit">
+            Заказать
+          </button>
+          <div class="additional__agreement">
+            <svg
+              class="icon__agree"
+              fill="#000000"
+              viewBox="0 0 1920 1920"
+              width="23px"
+              height="23px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M1743.858 267.012 710.747 1300.124 176.005 765.382 0 941.387l710.747 710.871 1209.24-1209.116z"
+                  fill-rule="evenodd"
+                ></path>
+              </g>
+            </svg>
+            <span class="agreement__text">Соглашаюсь <span class="agreement__
+              emphasis">с правилами пользования торговой площадкой</span> и
+                возврата
+            </spaы>
+          </div>
         </div>
       </form>
     </main>
 
     <footer class="footer">
-      <nav></nav>
       <div>© 2022 ООО «Товары и точка»</div>
+      <nav></nav>
     </footer>
   </body>
 </html>
