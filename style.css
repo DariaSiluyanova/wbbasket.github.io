@@ -96,20 +96,12 @@ main {
         letter-spacing: 1.5px;
     }
 
-    .header__search {
-        align-self: self-end;
+    .header::after {
+        bottom: -1px
     }
 
-    .header::after {
-        content: "";
-        position: absolute;
-        display: block;
-        bottom: -1px;
-        left: 0;
-        height: 24px;
-        width: 100%;
-        border-radius: 24px 24px 0 0;
-        background: var(--bg-main);
+    .header__search {
+        align-self: self-end;
     }
 
     .header-title {
@@ -122,8 +114,8 @@ main {
     
     .title {
         padding-bottom: 16px;
-        line-height: 16px;
         font-size: 18px;
+        line-height: 16px;
         letter-spacing: 1px;
     }
 
@@ -134,16 +126,24 @@ main {
 
     /*cart item*/
 
+    .checkbox__label--img {
+        height: 110px;
+    }
+
+    .checkbox--choose-all {
+        padding-bottom: 16px;
+    }
+
     .list__item__title {
         font-weight: 200;
     }
 
     .list__item__data {
         padding: 0 0 3px 16px;
-        
+        line-height: 22px;
     }
 
-    .list__list__details {
+    .list__details {
         padding-top: 1px;
         font-size: 13px;
     }
@@ -162,6 +162,24 @@ main {
         border: 1px solid var(--labels);
         border-radius: 8px;
         line-height: 22px;
+    }
+
+    .checkbox+.checkbox__label {
+        align-items: center;
+    }
+
+    .checkbox+.checkbox__label::before {
+        margin-right: 11px;
+    }
+
+    .cart-footer {
+        padding: 6px 13px 17px 0px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .amount-btn {
+        width: 80px;
+        height: 32px;
     }
 
     /*missing items*/
@@ -209,7 +227,7 @@ main {
         font-size: 0.85em;
     }
 
-    .write-off-money .checkbox+.checkbox-label::before {
+    .write-off-money .checkbox+.checkbox__label::before {
         margin-right: 8px;
     }
     
@@ -230,10 +248,35 @@ main {
     .additional-block__btn {
         margin-bottom: 10px;
     }
+
+    .total {
+        position: relative;
+        padding: 2.95em 1.15em 0.6em;
+    }
+
+    .label-position::before {
+        position: absolute;
+        top: 18px;
+        left: 4px;
+    }
+
+    .cart-footer__left {
+        margin-left: -7px;
+    }
 }
 
 
 @media (min-width: 321px) {
+    main {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .form-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
     .mobile {
         display: none;
     }
@@ -242,9 +285,32 @@ main {
         display: block;
     }
 
+    .form__cart,
+    .form__missing,
+    .form__delivery,
+    .form__payment,
+    .form__user-info {
+        width: 70%;
+    }
+
+    .total--modal {
+        position: absolute;
+        width: 27%;
+        top: 10px;
+        right: 22px;
+        padding: 16px 25px;
+        border-radius: 16px;
+        background-color: var(--labels);
+    }
+
+    /* header block */
     .header {
         position: relative;
-        padding: 20px 24px 25px;
+        padding: 20px 20px 25px 24px;
+    }
+
+    .header::after {
+        bottom: -10px
     }
 
     .bg-btn {
@@ -256,8 +322,7 @@ main {
     }
 
     .header-title {
-        flex-shrink: 4;
-        padding-left: 17px;
+        padding-left: 18px;
         padding-right: 20px;
         max-width: 155px;
         font-size: 24px;
@@ -268,7 +333,7 @@ main {
     .header__search {
         position: relative;
         align-self: baseline;
-        flex-grow: 10;
+        flex-grow: 10.5;
     }
 
     .search-input {
@@ -284,6 +349,7 @@ main {
         color: var(--placeholder);
     }
 
+    
     .header__search-icon {
         position: absolute;
         top: 12px;
@@ -296,12 +362,116 @@ main {
 
     .header__icon-personal {
         flex-grow: 1;
-    }
-
-    .header__icon-personal {
         margin-top: -9px;
         text-align: end;
         background-color: inherit;
+    }
+
+    .header__icon-profile {
+        margin-right: 8px;
+    }
+
+    .cart-container {
+        
+        padding: 21px 22px;
+    }
+
+    .main__form {
+        position: relative;
+    }
+
+    /* cart block */
+    .title {
+        padding-bottom: 20px;
+        line-height: 36px;
+        font-size: 28px;
+        letter-spacing: 0px;
+    }
+
+    .checkbox--choose-all {
+        padding: 5px 2px 16px;
+    }
+
+    .checkbox__img {
+        height: 96px;
+        width: 72px;
+    }
+
+    .checkbox+.checkbox__label {
+        align-items: self-start;
+    }
+
+    .checkbox+.checkbox__label::before {
+        margin-right: 11px;
+    }
+
+    .item-section {
+        display: flex;
+    }
+
+    .list__item__info .checkbox+.checkbox__label::before {
+        margin-top: 40px;
+        margin-right: 14px;
+        
+    }
+
+    .list__item__info {
+        width: 397px;
+    }
+
+    .list__item__title {
+        margin-bottom: 8px;
+        font-weight: 200;
+    }
+
+    .list__item__data {
+        padding-top: 2px;
+        padding-left: 16px;
+    }
+
+    .details {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list__item__details-store {
+        width: 100%;
+    }
+
+    .details__color {
+        margin-right: 17px;
+        margin-bottom: 6px
+    }
+
+    .details {
+        margin-bottom: 5px
+    }
+
+    .details__wb {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .wb-info {
+        margin-left: 6px;
+    }
+
+    .cart-footer {
+        flex-grow: 2;
+        flex-direction: column;
+    }
+
+    .item-section__price {
+        flex-grow: 3;
+    }
+
+    .amount-btn {
+        width: 100px;
+        height: 44px;
+    }
+
+    .cart-footer__left {
+        margin-left: -19px;
     }
 }
 
@@ -319,6 +489,17 @@ main {
     color: white;
 }
 
+.header::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    height: 24px;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background: var(--bg-main);
+}
+
 .bg-btn {
     background-color: var(--bg-header-footer)
 }
@@ -334,19 +515,17 @@ main {
 .checkbox--choose-all {
     display: flex;
     justify-content: space-between;
-    margin-top: 6px;
-    padding-bottom: 16px;
+    padding-top: 6px;
     border-bottom: 1px solid var(--border-color);
     font-size: 16px;
 }
 
-.checkbox+.checkbox-label {
+.checkbox+.checkbox__label {
     display: inline-flex;
-    align-items: center;
     user-select: none;
 }
 
-.checkbox+.checkbox-label::before {
+.checkbox+.checkbox__label::before {
     content: '';
     display: inline-block;
     width: 22px;
@@ -355,23 +534,17 @@ main {
     flex-grow: 0;
     border: 1px solid #adb5bd;
     border-radius: 5px;
-    margin-right: 11px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
 }
 
-.checkbox:checked+.checkbox-label::before {
+.checkbox:checked+.checkbox__label::before {
     border-color: var(--bg-checkbox);
     background-color: var(--bg-checkbox);
     background-image: url("./images/icons/agree.svg");
     background-size: 12px;
 }
-
-.checkbox-label--img {
-    height: 110px;
-}
-
 
 /*cart*/
 .collapse {
@@ -384,18 +557,8 @@ main {
     padding-top: 12px;
 }
 
-.label-position::before {
-  position: absolute;
-  top: 18px;
-  left: 4px;
-}
-
 .list__item__info {
     display: flex;
-}
-
-.list__item__data {
-    line-height: 22px;
 }
 
 .list__item__details-store {
@@ -424,8 +587,6 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80px;
-    height: 32px;
     font-size: 14px;
     background-color: var(--labels);
     border: 1px solid var(--labels);
@@ -463,12 +624,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 13px 17px 0px;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .cart-footer__left {
-    margin-left: -7px;
+    
     font-size: 12px;
     letter-spacing: 0.5px;
     color: var(--attention);
@@ -559,7 +718,7 @@ main {
     background-color: var(--labels);
 }
 
-.delivery-position {
+.form__delivery {
     margin-bottom: 55px;
 }
 
@@ -723,7 +882,7 @@ main {
     margin-bottom: 5px;
 }
 
-.payment--position {
+.form__payment {
     margin-bottom: 54px;
 }
 
@@ -755,11 +914,6 @@ main {
 
 .user-info__title {
     margin-bottom: 20px;
-}
-
-.total {
-    position: relative;
-    padding: 2.95em 1.15em 0.6em;
 }
 
 .total__row {

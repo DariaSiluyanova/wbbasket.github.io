@@ -57,7 +57,7 @@
       </div>
       
       <button class="laptop header__icon-personal">
-        <img src="./images/icons/profile.svg" alt="profile" />
+        <img class="header__icon-profile" src="./images/icons/profile.svg" alt="profile" />
       </button>
       <button class="laptop header__icon-personal">
         <img src="./images/icons/cart.svg" alt="cart" />
@@ -65,14 +65,14 @@
     </header>
 
     <main class="main">
-      <form action="#" method="post">
+      <form class="main__form form" action="#" method="post">
         <div class="cart-container">
-          <div>
+          <div class="form__cart">
             <h1 class="title">Корзина</h1>
             <ul class="list">
               <li class="checkbox--choose-all">
                 <input type="checkbox" class="checkbox" id="checkbox" />
-                <label class="checkbox-label" for="checkbox"
+                <label class="checkbox__label" for="checkbox"
                   >Выбрать все
                 </label>
                 <button class="collapse">
@@ -83,7 +83,7 @@
                   />
                 </button>
               </li>
-              <li class="list__item">
+              <li class="list__item item-section">
                 <div class="list__item__info">
                   <input
                     type="checkbox"
@@ -91,11 +91,12 @@
                     id="checkbox--t-short"
                   />
                   <label
-                    class="checkbox-label label-position checkbox-label--img"
+                    class="checkbox__label label-position checkbox__label--img"
                     for="checkbox--t-short"
                   >
                     <a href="#" title="Футболка UZcotton мужская">
                       <img
+                        class="checkbox__img"
                         src="./images/white-t-shirt_content.png"
                         alt="Футболка UZcotton мужская"
                       />
@@ -103,21 +104,21 @@
                   </label>
                   <div class="list__item__data">
                     <div class="mobile mob-price">
-                      <h3 class="cart-mobile-price">522 сом</h3>
-                      <div class="old-price">
+                      <h3 class="cart-mobile-price mobile">522 сом</h3>
+                      <div class="old-price mobile">
                         <span class="old-price--cancel">1051 сом</span>
                       </div>
                     </div>
-                    <h4 class="list__item__title">Футболка UZcotton мужская</h4>
-                    <div class="list__list__details details">
-                      <span>Цвет: белый</span>
-                      <span class="laptop">Размер: </span>
-                      <span class="details__size">56</span>
+                    <h4 class="list__item__title form-title">Футболка UZcotton мужская</h4>
+                    <div class="list__details details">
+                      <div class="details__color">Цвет: белый</div>
+                      <div class="laptop">Размер: </div>
+                      <div class="details__size">56</div>
                       <p class="list__item__details-store">Коледино WB</p>
                     </div>
-                    <p class="laptop">
+                    <p class="laptop details__wb">
                       OOO Вайлдберриз
-                      <span>
+                      <span class="wb-info">
                         <img
                           src="./images/icons/info.svg"
                           alt="see additional info"
@@ -126,6 +127,7 @@
                     </p>
                   </div>
                 </div>
+                
                 <div class="cart-footer">
                   <div class="amount-btn">
                     <button class="amount-btn__disabled amount-bg"></button>
@@ -186,9 +188,10 @@
                     </svg>
                   </div>
                 </div>
-                <div class="laptop">522 com</div>
+
+                <div class="laptop item-section__price">522 com</div>
               </li>
-              <li class="list__item">
+              <li class="list__item item-section">
                 <div class="list__item__info">
                   <input
                     type="checkbox"
@@ -196,7 +199,7 @@
                     id="checkbox--cardholder"
                   />
                   <label
-                    class="checkbox-label label-position checkbox-label--img"
+                    class="checkbox__label label-position checkbox__label--img"
                     for="checkbox--cardholder"
                   >
                     <a
@@ -204,6 +207,7 @@
                       title="Силиконовый чехол картхолдер (отверстия) для..."
                     >
                       <img
+                        class="checkbox__img"
                         src="./images/phone-content.png"
                         alt="Силиконовый чехол картхолдер (отверстия) для..."
                       />
@@ -211,15 +215,15 @@
                   </label>
                   <div class="list__item__data">
                     <div class="mobile mob-price">
-                      <h3 class="cart-mobile-price">2 100 047 сом</h3>
+                      <h3 class="cart-mobile-price mobile">2 100 047 сом</h3>
                       <div class="old-price">
-                        <span class="old-price--cancel">2 300 047 сом</span>
+                        <span class="old-price--cancel mobile">2 300 047 сом</span>
                       </div>
                     </div>
                     <h4 class="list__item__title">
                       Силиконовый чехол картхолдер (отверстия) для...
                     </h4>
-                    <div class="list__list__details details">
+                    <div class="list__details details">
                       <span>Цвет: прозрачный</span>
                       <span class="laptop">Размер: </span>
                       <p class="list__item__details-store">Коледино WB</p>
@@ -235,6 +239,7 @@
                     </p>
                   </div>
                 </div>
+                
                 <div class="cart-footer">
                   <div class="amount-btn">
                     <button class="amount-btn__disabled amount-bg"></button>
@@ -294,10 +299,11 @@
                       </g>
                     </svg>
                   </div>
+                  
                 </div>
-                <div class="laptop">522 com</div>
+                <div class="laptop item-section__price">522 com</div>
               </li>
-              <li class="list__item">
+              <li class="list__item item-section">
                 <div class="list__item__info">
                   <input
                     type="checkbox"
@@ -305,7 +311,7 @@
                     id="checkbox--pencils"
                   />
                   <label
-                    class="checkbox-label label-position checkbox-label--img"
+                    class="checkbox__label label-position checkbox__label--img"
                     for="checkbox--pencils"
                   >
                     <a
@@ -313,6 +319,7 @@
                       title="Карандаши цветные Faber-Castell 'Замок', набор 24 цв..."
                     >
                       <img
+                        class="checkbox__img"
                         src="./images/pencils_content.png"
                         alt="Карандаши цветные Faber-Castell 'Замок', набор 24 цв..."
                       />
@@ -320,15 +327,15 @@
                   </label>
                   <div class="list__item__data">
                     <div class="mobile mob-price">
-                      <h3 class="cart-mobile-price">494 сом</h3>
-                      <div class="old-price">
+                      <h3 class="cart-mobile-price  mobile">494 сом</h3>
+                      <div class="old-price mobile">
                         <span class="old-price--cancel">950 сом</span>
                       </div>
                     </div>
                     <h4 class="list__item__title list__item__title--pencil">
                       Карандаши цветные Faber-Castell "Замок", набор 24 цв...
                     </h4>
-                    <div class="list__list__details details">
+                    <div class="list__details details">
                       <p class="list__item__details-store">Коледино WB</p>
                     </div>
                     <p class="laptop">
@@ -342,6 +349,7 @@
                     </p>
                   </div>
                 </div>
+                
                 <div class="cart-footer cart-footer--pencils">
                   <div class="amount-btn">
                     <button class="amount-btn__disabled amount-bg"></button>
@@ -401,13 +409,16 @@
                       </g>
                     </svg>
                   </div>
+                  
                 </div>
-                <div class="laptop">522 com</div>
+
+                <div class="laptop item-section__price">522 com</div>
+                
               </li>
             </ul>
           </div>
 
-          <div class="missing-items">
+          <div class="missing-items form__missing">
             <div class="missing-items__header">
               <h3 class="missing-items__title">
                 Отсутствуют &#8226; <span>3 товара</span>
@@ -656,7 +667,7 @@
           </div>
         </div>
 
-        <div class="delivery delivery-position">
+        <div class="delivery form__delivery">
           <div class="delivery__title-container cart-title">
             <h2 class="cart-title__text">Способ доставки</h2>
             <button class="btn-edit">Изменить</button>
@@ -731,7 +742,7 @@
           </div>
         </div>
 
-        <div class="payment payment--position">
+        <div class="payment form__payment">
           <div class="payment__header cart-title">
             <h2 class="cart-title__text">Способ оплаты</h2>
             <button class="btn-edit">Изменить</button>
@@ -748,7 +759,7 @@
           </div>
         </div>
 
-        <div class="user-info">
+        <div class="user-info form__user-info">
           <h2 class="cart-title__text user-info__title">Получатель</h2>
           <div class="user__name">
             <input
@@ -789,7 +800,7 @@
           <div class="input-field___info">Для таможенного оформления</div>
         </div>
 
-        <div class="total">
+        <div class="total total--modal">
           <div class="total__row total__title">
             <h2>Итого</h2>
             <span class="total__sum">2 101 063 сом</span>
@@ -853,7 +864,7 @@
                 id="writeoffmoney"
                 name="writeoffmoney"
               />
-              <label class="checkbox-label" for="writeoffmoney"
+              <label class="checkbox__label" for="writeoffmoney"
                 >Списать оплату сразу</label
               >
               <div>Спишем оплату с карты при получении</div>
