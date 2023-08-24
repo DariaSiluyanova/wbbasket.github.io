@@ -810,7 +810,7 @@
 
         <div class="user-info form__user-info">
           <h2 class="user-info__title details-title">Получатель</h2>
-          <div class="user__name">
+          <div class="user__name form-field">
             <input
               class="input-field user__input"
               type="text"
@@ -826,21 +826,24 @@
               placeholder="Фамилия"
             />
           </div>
-          <div class="user__contacts">
+          <div class="user__contacts form-field">
             <input
               class="input-field user__input"
               type="email"
               name="user_email"
-              placeholder="Электронная почта"
+              placeholder="Почта"
             />
+            <label class="input-field user__input phone-label" for="phone"> Телефон
+              <input
+                class="phone-input"
+                type="tel"
+                name="user_phone"
+                placeholder="+7 988 123-45-67"
+                id="phone"
+              />
+            </label>
             <input
               class="input-field user__input"
-              type="tel"
-              name="user_phone"
-              placeholder="+7 988 123-45-67"
-            />
-            <input
-              class="input-field user__input input__inn"
               type="number"
               name="user_inn"
               placeholder="ИНН"
@@ -852,7 +855,7 @@
         <div class="total total--modal">
           <div class="total__row total__title">
             <h2 class="details-title">Итого</h2>
-            <span class="total__sum details-title">2 101 063 сом</span>
+            <span class="total__sum details-title">2 101 063 <spam class="total__unit">сом</spam></span>
           </div>
           <div class="total__details details-sum form-title">
             <div class="total__row">
@@ -870,14 +873,16 @@
           </div>
 
           <div class="addition">
-            <div class="laptop">
-              <h4 class="form-title">Доставка в пункт выдачи</h4>
-              <button>
-                <img src="./images/icons/pencil.svg" alt="icon-change" />
-              </button>
+            <div class="laptop addition__date-info">
+              <div class="addition__header">
+                <h4 class="form-title">Доставка в пункт выдачи</h4>
+                <button class="addition__btn">
+                  <img src="./images/icons/pencil.svg" alt="icon-change" />
+                </button>
+              </div>
 
-              <div>Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
-              <div>5–8 фев</div>
+              <div class="addition__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
+              <div class="addition__date">5–8 фев</div>
             </div>
 
             <div class="addition__info additional-block">
@@ -893,15 +898,17 @@
             </div>
           </div>
 
-          <div class="additional-block">
+          <div class="additional-block additional-block--laptop">
             <div class="laptop">
-              <h4 class="form-title">Оплата картой</h4>
-              <button>
-                <img src="./images/icons/pencil.svg" alt="icon-edit" />
-              </button>
+              <div class="addition__header">
+                  <h4 class="form-title">Оплата картой</h4>
+                <button class="addition__btn">
+                  <img src="./images/icons/pencil.svg" alt="icon-edit" />
+                </button>
+              </div>
 
-              <div>
-                <img src="./images/icons/mirpay.svg" alt="svg-mirpay" />
+              <div class="card-payment">
+                <img class="card-payment__icon" src="./images/icons/mirpay.svg" alt="svg-mirpay" />
                 1234 12•• •••• 1234
               </div>
             </div>
@@ -916,7 +923,7 @@
               <label class="checkbox__label" for="writeoffmoney"
                 >Списать оплату сразу</label
               >
-              <div>Спишем оплату с карты при получении</div>
+              <div class="additional-block__info">Спишем оплату с карты при получении</div>
             </div>
           </div>
 
