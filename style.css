@@ -287,6 +287,11 @@ body {
 }
 
 /*Delivery*/
+.product-img {
+    width: 40px;
+    height: 56px;
+}
+
 .delivery {
     position: relative;
     background-color: var(--labels);
