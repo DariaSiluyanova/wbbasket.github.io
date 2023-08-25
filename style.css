@@ -134,6 +134,7 @@ body {
     height: 22px;
     flex-shrink: 0;
     flex-grow: 0;
+    margin-right: 11px;
     border: 1px solid #adb5bd;
     border-radius: 5px;
     background-repeat: no-repeat;
@@ -151,12 +152,14 @@ body {
 /*cart*/
 .collapse {
     background-color: var(--bg-main);
-    margin-right: 7px;
+}
+
+.item__img-container {
+        position: relative;
 }
 
 .list__item {
     position: relative;
-    padding-top: 8px;
 }
 
 .list__item__info {
@@ -261,22 +264,13 @@ body {
     display: flex;
 }
 
-.item__img-container {
-    margin-right: 16px;
-}
-
 .missing-item {
     display: flex;
     justify-content: flex-end;
 }
 
 .missing-item:not(:last-child) {
-    padding-bottom: 15px;
     border-bottom: 1px solid var(--border-color);
-}
-
-.form__cart-container {
-    margin-bottom: 41px;
 }
 
 .missing-item__info {
@@ -331,14 +325,13 @@ body {
 }
 
 .form::after {
-    bottom: -70px;
+    bottom: -74px;
     background-color: var(--bg-main);
 }
 
 .cart-title {
     display: flex;
     justify-content: space-between;
-    padding-top: 9px;
 }
 
 .btn-edit {
@@ -413,10 +406,6 @@ body {
     background-color: var(--labels);
 }
 
-.payment__header {
-    padding-top: 0px;
-}
-
 .payment__card {
     margin-right: 11px;
     font-size: 16px;
@@ -443,6 +432,7 @@ body {
 
 .user-info {
     position: relative;
+    padding: 0 16px;
     background-color: var(--labels);
 }
 
@@ -504,9 +494,6 @@ body {
 
 .write-off-money {
     position: relative;
-    padding-left: 8px;
-    padding-top: 8px;
-    padding-bottom: 10px;
     font-size: 13px;
 }
 
@@ -572,6 +559,7 @@ body {
         font-size: 20px;
     }
 
+    /*cart*/
     .header {
         padding: 11px 16px 36px 11px;
         font-size: 20px;
@@ -613,12 +601,25 @@ body {
     }
     /*cart item*/
 
+    .collapse {
+        margin-right: 7px;
+    } 
+
     .checkbox__label--img {
         height: 110px;
     }
 
     .checkbox--choose-all {
         padding-bottom: 16px;
+    }
+
+    .mob-price__item {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .list__item {
+        padding-top: 13px;
     }
 
     .list__item__title {
@@ -632,17 +633,23 @@ body {
 
     .list__item__data {
         padding: 0 0 3px 16px;
-        line-height: 22px;
+    }
+
+    .list__item__mob-price {
+        margin-bottom: 3px;
+    }
+
+    .list__item__details-store {
+        padding-top: 4px;
     }
 
     .list__details {
-        padding-top: 1px;
-        font-size: 13px;
+        padding-top: 5px;
     }
 
 
     .details {
-        padding-top: 4px;
+        font-size: 13px;
     }
 
     .details__size {
@@ -661,7 +668,7 @@ body {
     }
 
     .cart-footer {
-        padding: 6px 13px 17px 0px;
+        padding: 8px 13px 14px 0px;
         border-bottom: 1px solid var(--border-color);
     }
 
@@ -696,7 +703,11 @@ body {
     }
 
     .item__img-container {
-        position: relative;
+        margin-right: 16px;
+    }
+
+    .missing-item:not(:last-child) {
+        padding-bottom: 15px;
     }
 
     .missing-item__info {
@@ -721,17 +732,21 @@ body {
         width: 100%;
     }
 
+    .form__cart-container {
+        margin-bottom: 52px;
+    }
+
     /*delivery*/
 
     .delivery::before,
     .payment::before,
     .user-info::before {
-        top: -12px;
-        height: 24px;
+        top: -20px;
+        height: 21px;
     }
 
     .payment::before {
-        height: 16px;
+        height: 20px;
     }
 
     .user-info::before {
@@ -802,10 +817,6 @@ body {
     .input-field___info {
         font-size: 0.85em;
     }
-    
-    .additional-block__checkbox {
-        margin-bottom: 23px;
-    }
 
     .additional-block__btn {
         margin-bottom: 10px;
@@ -844,10 +855,6 @@ body {
         margin-bottom: 20px;
     }
 
-    .user__info {
-        padding: 0 16px
-    }
-
     .input-field {
         width: 100%;
         padding-top: 0.45em;
@@ -861,7 +868,22 @@ body {
 
     /*total*/
     .additional-block {
-        padding: 7px 8px 11px;
+        padding: 6px 7px 11px;
+    }
+
+    .form__additional-block {
+        margin-bottom: 25px;
+    }
+
+    .phone-label {
+        position: relative;
+    }
+
+    .input-label {
+        position: absolute;
+        top: -18px;
+        left: 0;
+        font-size: 10px;
     }
 }
 
@@ -890,7 +912,7 @@ body {
     .form__delivery,
     .form__payment,
     .form__user-info {
-        width: 65.6%;
+        width: 65.5%;
     }
 
     .form {
@@ -912,7 +934,11 @@ body {
     }
 
     .unit {
-        font-size: 20px;
+        font-size: 16px;
+    }
+
+    .old-price--cancel .unit {
+        font-size: 13px;
     }
 
     .content__img {
@@ -1005,7 +1031,7 @@ body {
     }
 
     .checkbox--choose-all {
-        padding: 5px 2px 18px;
+        padding: 8px 0px 16px;
     }
 
     .checkbox+.checkbox__label {
@@ -1013,17 +1039,29 @@ body {
     }
 
     .checkbox+.checkbox__label::before {
-        margin-right: 8px;
+        margin-right: 10px;
     }
 
     .item-section {
         display: flex;
-        margin-bottom: 20px;
+        padding-top: 7px;
+    }
+
+    .icon-like-container--missing {
+        width: 75px;
+    }
+
+    .item__img-container {
+        margin-right: 14px;
+    }
+
+    .list__item {
+        margin-bottom: 17px;
     }
 
     .list__item__info .checkbox+.checkbox__label::before {
-        margin-top: 40px;
-        margin-right: 14px;
+        margin-top: 37px;
+        margin-right: 12px;
     }
 
     .list__item__info {
@@ -1054,7 +1092,7 @@ body {
     }
 
     .details {
-        margin-bottom: 5px
+        margin-bottom: 4px
     }
 
     .details__wb {
@@ -1070,18 +1108,18 @@ body {
         display: flex;
         flex-grow: 1;
         justify-content: space-between;
-        
+        padding-top: 4px;
     }
 
     .cart-footer {
         flex-direction: column;
         align-self: center;
-        padding-left: 14px;
         margin-bottom: auto;
     }
 
     .item-section__price {
         width: 125px;
+        text-align: end;
     }
 
     .amount-btn {
@@ -1102,12 +1140,8 @@ body {
         width: 60px;
     }
 
-    .item-section__price {
-        text-align: end;
-    }
-
     .cart-price {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 28px;
     }
     
@@ -1121,13 +1155,19 @@ body {
     }
 
     /*missing cart*/
+
+    .missing-item:not(:last-child) {
+        padding-bottom: 17px;
+    }
+
     .missing-item {
         flex-wrap: nowrap;
-        padding-top: 10px;
+        padding-top: 11px;
+        padding-right: 125px;
     }
 
     .missing-items__header {
-        padding-bottom: 16.5px;
+        padding-bottom: 19.5px;
     }
 
     .missing-item__info {
@@ -1156,7 +1196,6 @@ body {
     }
 
     .icon-like-container.icon-like-container--missing {
-        flex-grow: 1.4;
         align-self: flex-start;
         justify-content: flex-start;
         padding-top: 0;
@@ -1164,6 +1203,10 @@ body {
 
     .icon-missing {
         margin-right: 14px;
+    }
+
+    .form__cart-container {
+        margin-bottom: 52px;
     }
 
     /*delivery*/
@@ -1183,16 +1226,16 @@ body {
     .delivery::before,
     .payment::before,
     .user-info::before {
-        top: -5px;
         height: 20px;
     }
 
-    .payment::before {
-        top: -12px
+    .payment::before,
+    .delivery::before {
+        top: -16px;
     }
 
     .user-info::before {
-        top: -12px;
+        top: -12px
     }
 
     .delivery__title-container {
@@ -1216,7 +1259,7 @@ body {
     }
 
     .form__delivery {
-        margin-bottom: 45px;
+        margin-bottom: 48px;
     }
 
     .payment {
@@ -1224,22 +1267,22 @@ body {
     }
 
     .payment__header {
-        margin-bottom: 15px;
+        margin-bottom: 17px;
     }
 
     .payment__info {
-        margin-bottom: 6px;
+        margin-bottom: 10px;
     }
     
     .user-info {
-        padding: 2px 23px;
+        padding: 0px 23px;
     }
 
     .input-field {
         flex-grow: 1;
         width: 180px;
-        height: 47px;
-        padding-top: 22px;
+        height: 45px;
+        padding-top: 20px;
         font-size: 16px;
         line-height: 24px;
     }
@@ -1289,6 +1332,10 @@ body {
         margin-bottom: 6px;
     }
 
+    .total__title .unit {
+        font-size: 20px;
+    }
+
     .total__details {
         margin-bottom: 1.5em;
     }
@@ -1324,9 +1371,18 @@ body {
         background-color: var(--labels);
     }
 
+    .additional-block__card {
+        margin-bottom: 17px;
+    }
+
+    .write-off-money {
+        padding: 7px 0 10px 7px;
+        border-radius: 12px;
+        background-color: var(--additional);
+    }
+
     .card-payment {
-        padding-top: 6px;
-        padding-bottom: 16px;
+        padding-top: 4px;
     }
 
     .card-payment__icon {
@@ -1338,7 +1394,7 @@ body {
     }
 
     .additional-block__checkbox {
-        margin-bottom: 27px;
+        margin-bottom: 28px;
     }
 
     .additional-block__btn {
@@ -1388,10 +1444,6 @@ body {
     .list__item__info .checkbox+.checkbox__label::before {
         margin-top: 36px;
     }
-
-    .collapse {
-        margin-right: 0px;
-    }
     
     .unit {
         font-size: 16px;
@@ -1409,6 +1461,8 @@ body {
         padding-top: 0px;
     }
 
+    /*missing*/
+
     .missing-item {
         padding-top: 12px;
     }
@@ -1417,26 +1471,38 @@ body {
         margin-right: 30px;
     }
 
+    .missing-items__header {
+        padding-bottom: 17.5px; 
+    }
+
+
     .icon-like-container.icon-like-container--missing {
         justify-content: center;
     }
 
     .form__cart-container {
-        margin-bottom: 46px;
+        margin-bottom: 50px;
     }
 
+    /*delivery*/
+    
     .delivery__point__title {
         width: 22%;
     }
 
     /*payway*/ 
     .payment__header {
-        margin-bottom: 19px;
+        margin-bottom: 15px;
     }
 
     /*user__form*/
     .form-field {
         max-width: 700px;
+        margin-top: 18px;
+    }
+
+    .input-field___info {
+        max-width: 668px;
     }
 
     /*total-block*/
@@ -1448,6 +1514,18 @@ body {
 
     .addition__date-info {
         margin-bottom: 14px;
+    }
+
+    .additional-block {
+        padding: 5px 8px 11px 8px;
+    }
+
+    .additional-block--laptop {
+        padding: 9px 2px;
+    }
+
+    .additional-block__checkbox {
+        margin-bottom: 18px;
     }
 
     .icon__agree {
