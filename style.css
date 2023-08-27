@@ -475,7 +475,15 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
+.errorMsg {
+    font-size: 12px;
+    color: var(--orange);
+}
 
+.invalid {
+    color: var(--orange);
+    border-bottom: 1px solid var(--orange);
+}
 
 .total__row {
     display: flex;
