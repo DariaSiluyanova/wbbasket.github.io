@@ -77,7 +77,6 @@
         <img src="./images/icons/cart.svg" alt="cart" />
       </button>
     </header>
-
     <main class="main">
       <form class="main__form form" action="#" method="post">
         <div class="cart-container form__cart-container">
@@ -97,12 +96,15 @@
                   />
                 </button>
               </li>
+
               <li class="list__item item-section">
                 <div class="cart-info-container">
                   <div class="list__item__info">
                     <input
                       type="checkbox"
                       class="checkbox checkbox--choose-all"
+                      value="1"
+                      data-price="522"
                       id="checkbox--t-short"
                     />
                     <label
@@ -156,15 +158,17 @@
 
                   <div class="cart-footer">
                     <div class="amount-btn">
-                      <button class="amount-btn__disabled amount-bg"></button>
+                      <button type="button" class="amount-btn__minus amount-bg"></button>
                       <div class="amount-btn__amount">1</div>
                       <button
-                        class="amount-btn__active amount-btn__plus amount-bg"
+                        type="button"
+                        class="amount-btn__plus amount-bg"
                       ></button>
                     </div>
                     <span class="cart-footer__left left">Осталось 2 шт.</span>
                     <div class="icon-like-container">
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -179,6 +183,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -190,6 +195,7 @@
                         </g>
                       </svg>
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -204,6 +210,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                             stroke="#000000"
                             stroke-width="1"
@@ -218,7 +225,8 @@
 
                 <div class="laptop item-section__price">
                   <h3 class="cart-price">
-                    522&nbsp;<span class="unit">сом</span>
+                    <span class="cart-price__price">522&nbsp;</span>
+                    <span class="unit">сом</span>
                   </h3>
                   <div class="old-price">
                     <span class="old-price--cancel"
@@ -227,12 +235,15 @@
                   </div>
                 </div>
               </li>
+
               <li class="list__item item-section">
                 <div class="cart-info-container">
                   <div class="list__item__info">
                     <input
                       type="checkbox"
                       class="checkbox checkbox--choose-all"
+                      value="200"
+                      data-price="10500"
                       id="checkbox--cardholder"
                     />
                     <label
@@ -288,15 +299,17 @@
 
                   <div class="cart-footer">
                     <div class="amount-btn">
-                      <button class="amount-btn__disabled amount-bg"></button>
+                      <button type="button" class="amount-btn__minus amount-bg"></button>
                       <div class="amount-btn__amount">200</div>
                       <button
-                        class="amount-btn__active amount-btn__plus amount-bg"
+                        type="button" 
+                        class="amount-btn__plus amount-bg"
                       ></button>
                     </div>
                     <p class="cart-footer__left"></p>
                     <div class="icon-like-container">
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -311,6 +324,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -322,6 +336,7 @@
                         </g>
                       </svg>
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -336,6 +351,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                             stroke="#000000"
                             stroke-width="1"
@@ -349,7 +365,7 @@
                 </div>
                 <div class="laptop item-section__price">
                   <h3 class="cart-price cart-price--high">
-                    2 100 047&nbsp;<span class="unit">сом</span>
+                    <span class="cart-price__price">2 100 047&nbsp;</span><span class="unit">сом</span>
                   </h3>
                   <div class="old-price">
                     <span class="old-price--cancel"
@@ -358,12 +374,15 @@
                   </div>
                 </div>
               </li>
+
               <li class="list__item item-section">
                 <div class="cart-info-container">
                   <div class="list__item__info">
                     <input
                       type="checkbox"
                       class="checkbox checkbox--choose-all"
+                      value="2"
+                      data-price="247"
                       id="checkbox--pencils"
                     />
                     <label
@@ -420,15 +439,17 @@
 
                   <div class="cart-footer cart-footer--pencils">
                     <div class="amount-btn">
-                      <button class="amount-btn__disabled amount-bg"></button>
+                      <button type="button" class="amount-btn__minus amount-bg"></button>
                       <div class="amount-btn__amount">2</div>
                       <button
-                        class="amount-btn__active amount-btn__plus amount-bg"
+                        type="button"
+                        class="amount-btn__plus amount-bg"
                       ></button>
                     </div>
                     <p class="cart-footer__left left">Осталось 2 шт.</p>
                     <div class="icon-like-container">
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -443,6 +464,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -454,6 +476,7 @@
                         </g>
                       </svg>
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -468,6 +491,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                             stroke="#000000"
                             stroke-width="1"
@@ -482,7 +506,8 @@
 
                 <div class="laptop item-section__price">
                   <h3 class="cart-price">
-                    494&nbsp;<span class="unit">сом</span>
+                    <span class="cart-price__price">494&nbsp;</span>
+                    <span class="unit">сом</span>
                   </h3>
                   <div class="old-price">
                     <span class="old-price--cancel"
@@ -541,7 +566,7 @@
 
                 <div class="icon-like-container icon-like-container--missing">
                   <svg
-                    class="icon-missing"
+                    class="icon-missing icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -556,6 +581,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -567,6 +593,7 @@
                     </g>
                   </svg>
                   <svg
+                    class="icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -581,6 +608,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                         stroke="#000000"
                         stroke-width="1"
@@ -629,7 +657,7 @@
 
                 <div class="icon-like-container icon-like-container--missing">
                   <svg
-                    class="icon-missing"
+                    class="icon-missing icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -644,6 +672,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -655,6 +684,7 @@
                     </g>
                   </svg>
                   <svg
+                    class="icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -669,6 +699,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                         stroke="#000000"
                         stroke-width="1"
@@ -715,7 +746,7 @@
                 </div>
                 <div class="icon-like-container icon-like-container--missing">
                   <svg
-                    class="icon-missing"
+                    class="icon-missing icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -730,6 +761,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -741,6 +773,7 @@
                     </g>
                   </svg>
                   <svg
+                    class="icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -755,6 +788,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                         stroke="#000000"
                         stroke-width="1"
@@ -864,44 +898,59 @@
         <div class="user-info form__user-info">
           <h2 class="user-info__title details-title">Получатель</h2>
           <div class="user__name form-field">
-            <input
-              class="input-field user__input"
-              type="text"
-              name="user_firstname"
-              value=""
-              placeholder="Имя"
-            />
-            <input
-              class="input-field user__input"
-              type="text"
-              name="user_secondname"
-              value=""
-              placeholder="Фамилия"
-            />
+            <label class="input-field user__input info-label" for="name">
+              <span class="input-label">Имя</span>
+              <input
+                class="info-input"
+                id="name"
+                type="text"
+                name="user_firstname"
+                value=""
+              />
+              <div id="error"></div>
+             </label>
+             <label class="input-field user__input info-label" for="secondName">
+              <span class="input-label">Фамилия</span>
+              <input
+                class="info-input"
+                id="secondName"
+                type="text"
+                name="user_secondName"
+                value=""
+              />
+             </label>
           </div>
           <div class="user__contacts form-field">
-            <input
-              class="input-field user__input"
-              type="email"
-              name="user_email"
-              placeholder="Почта"
-            />
-            <label class="input-field user__input phone-label" for="phone">
+            <label class="input-field user__input info-label" for="email">
+              <span class="input-label">Почта</span>
+              <input
+                class="info-input"
+                type="email"
+                name="user_email"
+                placeholder=""
+                id="email"
+              />
+            </label>
+            <label class="input-field user__input info-label" for="phone">
               <span class="input-label">Телефон</span>
               <input
-                class="phone-input"
+                class="info-input"
                 type="tel"
                 name="user_phone"
-                placeholder="+7 988 123-45-67"
+                placeholder=""
                 id="phone"
               />
             </label>
-            <input
-              class="input-field user__input"
-              type="number"
-              name="user_inn"
-              placeholder="ИНН"
-            />
+            <label class="input-field user__input info-label" for="inn">
+              <span class="input-label">ИНН</span>
+              <input
+                class="info-input"
+                type="number"
+                name="user_inn"
+                placeholder=""
+                id="inn"
+              />
+            </label>
           </div>
           <div class="input-field___info">Для таможенного оформления</div>
         </div>
@@ -909,9 +958,10 @@
         <div class="total total--modal">
           <div class="total__row total__title">
             <h2 class="details-title">Итого</h2>
-            <span class="total__sum details-title"
-              >2 101 063 <spam class="unit">сом</spam></span
-            >
+            <span>
+              <span class="total__sum details-title"></span> 
+              <spam class="unit">сом</spam>
+            </span>
           </div>
           <div class="total__details details-sum form-title">
             <div class="total__row">
@@ -993,9 +1043,7 @@
             </div>
           </div>
 
-          <button class="order additional-block__btn" type="submit">
-            Заказать
-          </button>
+          <button class="order additional-block__btn" type="submit">Заказать</button>
           <div class="additional__agreement">
             <svg
               class="icon__agree"
@@ -1050,5 +1098,9 @@
         </div>
       </nav>
     </footer>
+
+    <script src="script/scriptTotal.js"></script>
+    <script src="script/changeText.js"></script>
+    <script src="script/inputValid.js"></script>
   </body>
 </html>

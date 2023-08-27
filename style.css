@@ -107,6 +107,25 @@ body {
 }
 
 
+/*icon-action*/
+.icon-cart:hover {
+    cursor: url(./images/icons/cursor-pointer.svg) 5 5, pointer;
+}
+
+.icon-cart:hover .icon-cart--path{
+    stroke: var(--attention);
+}
+
+.icon-missing-react:hover {
+    cursor: url(./images/icons/cursor-pointer.svg) 5 5, pointer;
+}
+
+.icon-missing-react:hover .icon-missing-react--path {
+    stroke: var(--bg-checkbox);
+}   
+
+
+
 /*checkbox*/
 .checkbox {
     position: absolute;
@@ -126,6 +145,7 @@ body {
     display: inline-flex;
     user-select: none;
 }
+
 
 .checkbox+.checkbox__label::before {
     content: '';
@@ -202,16 +222,20 @@ body {
 }
 
 .amount-bg {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: var(--labels);
+}
+
+.amount-bg::before {
+    content: "";
+    position: absolute;
     width: 11.33px;
     height: 1px;
-}
-
-.amount-btn__disabled {
-    background-color: var(--disabled);
-}
-
-.amount-btn__active {
-    background-color: var(--active-amount);
+    top: 14px;
+    left: 7px;
+    background-color: var(--active-amount)
 }
 
 .amount-btn__plus {
@@ -221,11 +245,15 @@ body {
 .amount-btn__plus::after {
     content: "";
     position: absolute;
-    top: -5px;
-    left: 5px;
+    top: 9px;
+    left: 12px;
     width: 1px;
     height: 11.3px;
     background-color: var(--active-amount);   
+}
+
+.btn-disabled {
+    background-color: var(--disabled);
 }
 
 .cart-footer {
@@ -442,7 +470,7 @@ body {
 }
 
 /*инпут*/ 
-.input-field {
+.input-field{
     background-color: inherit;
     border-bottom: 1px solid var(--border-color);
 }
@@ -958,7 +986,7 @@ body {
     }
 
     .header::after {
-        bottom: -10px
+        bottom: -5px
     }
 
     .bg-btn {
@@ -1309,13 +1337,14 @@ body {
         font-size: 12px;
     }
 
-    .phone-input {
+    .info-input {
         width: 100%;
-        padding-top: 3px;
+        padding: 3px;
         font-size: 16px;
+        outline-color: var(--labels);
     }
 
-    .phone-label {
+    .info-label {
         padding-top: 0px;
         font-size: 14px;
         line-height: 20px;
