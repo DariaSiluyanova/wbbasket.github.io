@@ -77,7 +77,6 @@
         <img src="./images/icons/cart.svg" alt="cart" />
       </button>
     </header>
-
     <main class="main">
       <form class="main__form form" action="#" method="post">
         <div class="cart-container form__cart-container">
@@ -97,12 +96,15 @@
                   />
                 </button>
               </li>
+
               <li class="list__item item-section">
                 <div class="cart-info-container">
                   <div class="list__item__info">
                     <input
                       type="checkbox"
                       class="checkbox checkbox--choose-all"
+                      value="1"
+                      data-price="522"
                       id="checkbox--t-short"
                     />
                     <label
@@ -113,6 +115,11 @@
                         <img
                           class="content__img"
                           src="./images/white-t-shirt_content.png"
+                          srcset="
+                            ./images/white-t-shirt_content.png    1x,
+                            ./images/white-t-shirt_content@2x.png 2x,
+                            ./images/white-t-shirt_content@3x.png 3x
+                          "
                           alt="Футболка UZcotton мужская"
                         />
                       </a>
@@ -129,7 +136,7 @@
                         </div>
                       </div>
                       <h4 class="list__item__title form-title">
-                        Футболка UZcotton мужская
+                        <a href="#">Футболка UZcotton мужская</a>
                       </h4>
                       <div class="list__details details">
                         <div class="details__color">Цвет: белый</div>
@@ -140,7 +147,7 @@
                       <p class="laptop details__wb">
                         OOO Вайлдберриз
                         <span class="wb-info">
-                          <img
+                          <img                           
                             src="./images/icons/info.svg"
                             alt="see additional info"
                           />
@@ -151,15 +158,17 @@
 
                   <div class="cart-footer">
                     <div class="amount-btn">
-                      <button class="amount-btn__disabled amount-bg"></button>
+                      <button type="button" class="amount-btn__minus amount-bg"></button>
                       <div class="amount-btn__amount">1</div>
                       <button
-                        class="amount-btn__active amount-btn__plus amount-bg"
+                        type="button"
+                        class="amount-btn__plus amount-bg"
                       ></button>
                     </div>
                     <span class="cart-footer__left left">Осталось 2 шт.</span>
                     <div class="icon-like-container">
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -174,6 +183,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -185,6 +195,7 @@
                         </g>
                       </svg>
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -199,6 +210,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                             stroke="#000000"
                             stroke-width="1"
@@ -213,7 +225,8 @@
 
                 <div class="laptop item-section__price">
                   <h3 class="cart-price">
-                    522&nbsp;<span class="unit">сом</span>
+                    <span class="cart-price__price">522&nbsp;</span>
+                    <span class="unit">сом</span>
                   </h3>
                   <div class="old-price">
                     <span class="old-price--cancel"
@@ -222,12 +235,15 @@
                   </div>
                 </div>
               </li>
+
               <li class="list__item item-section">
                 <div class="cart-info-container">
                   <div class="list__item__info">
                     <input
                       type="checkbox"
                       class="checkbox checkbox--choose-all"
+                      value="200"
+                      data-price="10500"
                       id="checkbox--cardholder"
                     />
                     <label
@@ -241,6 +257,11 @@
                         <img
                           class="content__img"
                           src="./images/phone-content.png"
+                          srcset="
+                            ./images/phone-content.png    1x,
+                            ./images/phone-content@2x.png 2x,
+                            ./images/phone-content@3x.png 3x
+                          "
                           alt="Силиконовый чехол картхолдер (отверстия) для..."
                         />
                       </a>
@@ -257,8 +278,8 @@
                         </div>
                       </div>
                       <h4 class="list__item__title form-title">
-                        Силиконовый чехол картхолдер (отверстия) для карт,
-                        прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                        <a href="#">Силиконовый чехол картхолдер (отверстия) для карт,
+                          прозрачный кейс бампер на Apple iPhone XR, MobiSafe</a>
                       </h4>
                       <div class="list__details details">
                         <span class="details__color">Цвет: прозрачный</span>
@@ -268,25 +289,33 @@
                         OOO Мегапрофстиль
                         <span class="wb-info">
                           <img
+                            class="wb-info__icon"
                             src="./images/icons/info.svg"
                             alt="see additional info"
                           />
                         </span>
+                          <div class="info-popup" id="info-popup">
+                            <h4 class="info-popup__item">&#171;Мегапрофстиль&#187;</h4>
+                            <p class="info-popup__item">ОГРН: 5167746237148</p>
+                            <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
+                          </div>
                       </p>
                     </div>
                   </div>
 
                   <div class="cart-footer">
                     <div class="amount-btn">
-                      <button class="amount-btn__disabled amount-bg"></button>
+                      <button type="button" class="amount-btn__minus amount-bg"></button>
                       <div class="amount-btn__amount">200</div>
                       <button
-                        class="amount-btn__active amount-btn__plus amount-bg"
+                        type="button" 
+                        class="amount-btn__plus amount-bg"
                       ></button>
                     </div>
                     <p class="cart-footer__left"></p>
                     <div class="icon-like-container">
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -301,6 +330,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -312,6 +342,7 @@
                         </g>
                       </svg>
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -326,6 +357,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                             stroke="#000000"
                             stroke-width="1"
@@ -339,7 +371,7 @@
                 </div>
                 <div class="laptop item-section__price">
                   <h3 class="cart-price cart-price--high">
-                    2 100 047&nbsp;<span class="unit">сом</span>
+                    <span class="cart-price__price">2 100 047&nbsp;</span><span class="unit">сом</span>
                   </h3>
                   <div class="old-price">
                     <span class="old-price--cancel"
@@ -348,12 +380,15 @@
                   </div>
                 </div>
               </li>
+
               <li class="list__item item-section">
                 <div class="cart-info-container">
                   <div class="list__item__info">
                     <input
                       type="checkbox"
                       class="checkbox checkbox--choose-all"
+                      value="2"
+                      data-price="247"
                       id="checkbox--pencils"
                     />
                     <label
@@ -368,6 +403,11 @@
                           class="content__img"
                           src="./images/pencils_content.png"
                           alt="Карандаши цветные Faber-Castell 'Замок', набор 24 цв..."
+                          srcset="
+                            ./images/pencils_content.png    1x,
+                            ./images/pencils_content@2x.png 2x,
+                            ./images/pencils_content@3x.png 3x
+                          "
                         />
                       </a>
                     </label>
@@ -385,8 +425,8 @@
                       <h4
                         class="list__item__title form-title list__item__title--pencil"
                       >
-                        Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
-                        заточенные, шестигранные,Faber-Castell
+                        <a href="#">Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                          заточенные, шестигранные,Faber-Castell</a>
                       </h4>
                       <div class="list__details details">
                         <p class="list__item__details-store">Коледино WB</p>
@@ -405,15 +445,17 @@
 
                   <div class="cart-footer cart-footer--pencils">
                     <div class="amount-btn">
-                      <button class="amount-btn__disabled amount-bg"></button>
+                      <button type="button" class="amount-btn__minus amount-bg"></button>
                       <div class="amount-btn__amount">2</div>
                       <button
-                        class="amount-btn__active amount-btn__plus amount-bg"
+                        type="button"
+                        class="amount-btn__plus amount-bg"
                       ></button>
                     </div>
                     <p class="cart-footer__left left">Осталось 2 шт.</p>
                     <div class="icon-like-container">
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -428,6 +470,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -439,6 +482,7 @@
                         </g>
                       </svg>
                       <svg
+                        class="icon-cart"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -453,6 +497,7 @@
                         ></g>
                         <g id="SVGRepo_iconCarrier">
                           <path
+                            class="icon-cart--path"
                             d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                             stroke="#000000"
                             stroke-width="1"
@@ -467,7 +512,8 @@
 
                 <div class="laptop item-section__price">
                   <h3 class="cart-price">
-                    494&nbsp;<span class="unit">сом</span>
+                    <span class="cart-price__price">494&nbsp;</span>
+                    <span class="unit">сом</span>
                   </h3>
                   <div class="old-price">
                     <span class="old-price--cancel"
@@ -500,6 +546,11 @@
                       <img
                         class="content__img"
                         src="./images/white-t-shirt_abcent.png"
+                        srcset="
+                          ./images/white-t-shirt_abcent.png    1x,
+                          ./images/white-t-shirt_abcent@2x.png 2x,
+                          ./images/white-t-shirt_abcent@3x.png 3x
+                        "
                         alt="Футболка UZcotton мужская отсутствует"
                       />
                     </a>
@@ -510,7 +561,7 @@
                     <h4
                       class="missing-item__title form-title list__item__title"
                     >
-                      Футболка UZcotton мужская
+                      <a href="#">Футболка UZcotton мужская</a>
                     </h4>
                     <div class="missing-item__details">
                       <span class="missing-item__color">Цвет: белый</span>
@@ -521,7 +572,7 @@
 
                 <div class="icon-like-container icon-like-container--missing">
                   <svg
-                    class="icon-missing"
+                    class="icon-missing icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -536,6 +587,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -547,6 +599,7 @@
                     </g>
                   </svg>
                   <svg
+                    class="icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -561,6 +614,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                         stroke="#000000"
                         stroke-width="1"
@@ -582,6 +636,11 @@
                       <img
                         class="content__img"
                         src="./images/phone_abcent.png"
+                        srcset="
+                          ./images/phone_abcent.png    1x,
+                          ./images/phone_abcent@2x.png 2x,
+                          ./images/phone_abcent@3x.png 3x
+                        "
                         alt="Силиконовый чехол картхолдер (отверстия) для..."
                       />
                     </a>
@@ -592,8 +651,8 @@
                     <h4
                       class="missing-item__title form-title list__item__title"
                     >
-                      Силиконовый чехол картхолдер (отверстия) для карт,
-                      прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                      <a href="#">Силиконовый чехол картхолдер (отверстия) для карт,
+                        прозрачный кейс бампер на Apple iPhone XR, MobiSafe</a>
                     </h4>
                     <div class="missing-item__details">
                       <span class="missing-item__color">Цвет: прозрачный</span>
@@ -604,7 +663,7 @@
 
                 <div class="icon-like-container icon-like-container--missing">
                   <svg
-                    class="icon-missing"
+                    class="icon-missing icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -619,6 +678,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -630,6 +690,7 @@
                     </g>
                   </svg>
                   <svg
+                    class="icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -644,6 +705,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                         stroke="#000000"
                         stroke-width="1"
@@ -665,6 +727,10 @@
                       <img
                         class="content__img"
                         src="./images/pencil_abcent.png"
+                        srcset="
+                          ./images/pencil_abcent@2x.png 2x,
+                          ./images/pencil_abcent@3x.png 3x
+                        "
                         alt="Карандаши цветные Faber-Castell 'Замок', набор 24 цв..."
                       />
                     </a>
@@ -674,9 +740,10 @@
                   <div class="missing-item__info">
                     <h4
                       class="missing-item__title form-title list__item__title"
-                    >
+                    ><a href="#">
                       Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
                       заточенные, шестигранные, Faber-Castell
+                    </a>
                     </h4>
                     <div class="missing-item__details">
                       <span></span>
@@ -686,7 +753,7 @@
                 </div>
                 <div class="icon-like-container icon-like-container--missing">
                   <svg
-                    class="icon-missing"
+                    class="icon-missing icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -701,6 +768,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
@@ -712,6 +780,7 @@
                     </g>
                   </svg>
                   <svg
+                    class="icon-missing-react"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -726,6 +795,7 @@
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       <path
+                        class="icon-missing-react--path"
                         d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
                         stroke="#000000"
                         stroke-width="1"
@@ -768,14 +838,14 @@
             <div class="delivery__products products">
               <img
                 class="products__item product-img"
-                src="./images/white-t-shirt.png"
+                src="./images/white-t-shirt_content.png"
                 alt="white-t-shirt"
               />
               <span class="delivery__img-container">
                 <span class="delivery__img__digit">184</span>
                 <img
                   class="products__item product-img"
-                  src="./images/phone.png"
+                  src="./images/phone-content.png"
                   alt="phone"
                 />
               </span>
@@ -783,7 +853,7 @@
                 <span class="delivery__img__digit">2</span>
                 <img
                   class="products__item product-img"
-                  src="./images/book.png"
+                  src="./images/pencils_content.png"
                   alt="book"
                 />
               </span>
@@ -796,7 +866,7 @@
                 <span class="delivery__img__digit">16</span>
                 <img
                   class="products__item product-img"
-                  src="./images/phone.png"
+                  src="./images/phone-content.png"
                   alt="phone"
                 />
               </span>
@@ -810,8 +880,10 @@
             />
             <span class="delivery__return__add"
               >Обратная доставка товаров на склад при отказе —
-              <span class="delivery__return__free">бесплатно</span></span
-            >
+              <span class="delivery__return__free additionsl__info__free">бесплатно</span></span>
+              <div class="delivery__return__popup">
+                Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно
+              </div>
           </div>
         </div>
 
@@ -835,44 +907,61 @@
         <div class="user-info form__user-info">
           <h2 class="user-info__title details-title">Получатель</h2>
           <div class="user__name form-field">
-            <input
-              class="input-field user__input"
-              type="text"
-              name="user_firstname"
-              value=""
-              placeholder="Имя"
-            />
-            <input
-              class="input-field user__input"
-              type="text"
-              name="user_secondname"
-              value=""
-              placeholder="Фамилия"
-            />
+            <label class="input-field user__input info-label" for="name">
+              <span class="input-label">Имя</span>
+              <input
+                class="info-input"
+                id="name"
+                type="text"
+                name="user_firstname"
+                value=""
+                pattern="[A-Za-zА-Яа-яЁё]"
+              />
+              <div id="errorName" class="errorMsg"></div>
+             </label>
+             <label class="input-field user__input info-label" for="secondName">
+              <span class="input-label">Фамилия</span>
+              <input
+                class="info-input"
+                id="secondName"
+                type="text"
+                name="user_secondName"
+                value=""
+              />
+             </label>
           </div>
           <div class="user__contacts form-field">
-            <input
-              class="input-field user__input"
-              type="email"
-              name="user_email"
-              placeholder="Почта"
-            />
-            <label class="input-field user__input phone-label" for="phone">
-              <span class="input-label">Телефон</span>
+            <label class="input-field user__input info-label" for="email">
+              <span class="input-label">Почта</span>
               <input
-                class="phone-input"
+                class="info-input"
+                type="email"
+                name="user_email"
+                placeholder=""
+                id="email"
+              />
+            </label>
+            <label class="input-field user__input info-label" for="phone">
+              <span class="input-label"><span class="input-label">Телефон</span></span>
+              <input
+                class="info-input"
                 type="tel"
+                value="+7"
+                pattern="^\+7(\s+)?[0-9]{3}?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$"
+                maxlength="12"
                 name="user_phone"
-                placeholder="+7 988 123-45-67"
                 id="phone"
               />
             </label>
-            <input
-              class="input-field user__input"
-              type="number"
-              name="user_inn"
-              placeholder="ИНН"
-            />
+            <label class="input-field user__input info-label" for="inn">
+              <span class="input-label">ИНН</span>
+              <input
+                class="info-input"
+                type="number"
+                name="user_inn"
+                id="inn"
+              />
+            </label>
           </div>
           <div class="input-field___info">Для таможенного оформления</div>
         </div>
@@ -880,9 +969,10 @@
         <div class="total total--modal">
           <div class="total__row total__title">
             <h2 class="details-title">Итого</h2>
-            <span class="total__sum details-title"
-              >2 101 063 <spam class="unit">сом</spam></span
-            >
+            <span>
+              <span class="total__sum details-title"></span> 
+              <spam class="unit">сом</spam>
+            </span>
           </div>
           <div class="total__details details-sum form-title">
             <div class="total__row">
@@ -922,12 +1012,13 @@
               />
               <span
                 >Обратная доставка товаров на склад при отказе —
-                <span class="additionsl__info__free">бесплатно</span></span
-              >
+                <span class="additionsl__info__free">бесплатно</span></span>
             </div>
           </div>
 
-          <div class="additional-block form__additional-block additional-block--laptop">
+          <div
+            class="additional-block form__additional-block form__additional-block additional-block--laptop"
+          >
             <div class="laptop additional-block__card">
               <div class="addition__header">
                 <h4 class="form-title">Оплата картой</h4>
@@ -962,9 +1053,11 @@
             </div>
           </div>
 
-          <button class="order additional-block__btn" type="submit">
-            Заказать
-          </button>
+          <label class="order additional-block__btn" for="orderBtn">
+            <span class="order__text">Заказать</span>
+            <input class="order__btn" type="submit" id="orderBtn"/>
+          </label>
+          
           <div class="additional__agreement">
             <svg
               class="icon__agree"
@@ -1020,6 +1113,9 @@
       </nav>
     </footer>
 
-    <script src="script/script.js"></script>
+    <script src="script/scriptTotal.js"></script>
+    <script src="script/changeText.js"></script>
+    <script src="script/inputValid.js"></script>
+    <script src="script/popupInfo.js"></script>
   </body>
 </html>
