@@ -6,7 +6,7 @@
     <title>Wildberries</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
-  <body>
+  <body class="main-body">
     <header class="header">
       <button class="mobile bg-btn">
         <svg
@@ -84,7 +84,12 @@
             <h1 class="title">Корзина</h1>
             <ul class="list">
               <li class="checkbox--choose-all">
-                <div class="choose-all-container">
+                <div class="collapsed-title">
+                  <div class="collapsed-title__items"><span class="all-count">266</span> товаров</div>
+                  <span>&#8226;</span>
+                  <div class="collapsed-title__price"><span class="all-price">2 100 569</span> com</div>
+                </div>
+                <div class="choose-all-container">                  
                   <input type="checkbox" class="checkbox" id="checkbox" />
                   <label class="checkbox__label" for="checkbox"
                     >Выбрать все
@@ -542,7 +547,7 @@
           <div class="missing-items form__missing">
             <div class="missing-items__header">
               <h3 class="missing-items__title form-title">
-                Отсутствуют &#8226;<span>3 товара</span>
+                Отсутствуют &#8226;<span>&nbsp;3 товара</span>
               </h3>
               <button type="button" class="collapse collapse--missing">
                 <img
@@ -904,7 +909,7 @@
         <div class="payment form__payment">
           <div class="payment__header cart-title">
             <h2 class="cart-title__text details-title">Способ оплаты</h2>
-            <button class="btn-edit">Изменить</button>
+            <button type="button" class="btn-edit">Изменить</button>
           </div>
           <div class="payment__info">
             <div class="payment__card card-container">
@@ -1106,7 +1111,8 @@
           </div>
         </div>
       </form>
-    </main>
+
+    </main> 
 
     <footer class="footer">
       <div class="footer__copyrights">© 2022 ООО «Товары и точка»</div>
@@ -1129,10 +1135,54 @@
       </nav>
     </footer>
 
+    <div class="delivery-container">
+      <div class="delivery-modal">
+        <div class="delivery-modal__title">
+          <span class="delivery-modal__text">Способ оплаты</span>
+          <button type="button" class="delivery-modal__close"></button>
+        </div>
+        <form class="delivery-modal__cards">
+          <ul class="cards-list">
+            <li class="cards-list__item item-card">
+              <label class="item-card__label" for="mirCard">
+                <input class="item-card__radio" type="radio" name="payCard" id="mirCard">
+                <img class="item-card__icon" src="./images/icons/mirpay.svg" alt="mirCard">
+                <span>1234 56•• •••• 1234</span>
+              </label>
+            </li>
+            <li class="cards-list__item item-card">
+              <label class="item-card__label" for="mirCard">
+                <input class="item-card__radio" type="radio" name="payCard" id="visaCard">
+                <img class="item-card__icon" src="./images/icons/visa-pay.svg" alt="mirCard">
+                <span>1234 56•• •••• 1234</span>
+              </label>
+            </li>
+            <li class="cards-list__item item-card">
+              <label class="item-card__label" for="mirCard">
+                <input class="item-card__radio" type="radio" name="payCard" id="masterCard">
+                <img class="item-card__icon" src="./images/icons/master-card-pay.svg" alt="mirCard">
+                <span>1234 56•• •••• 1234</span>
+              </label>
+            </li>
+            <li class="cards-list__item item-card">
+              <label class="item-card__label" for="mirCard">
+                <input class="item-card__radio" type="radio" name="payCard" id="maestroCard">
+                <img class="item-card__icon" src="./images/icons/maestro-card-pay.svg" alt="mirCard">
+                <span>1234 56•• •••• 1234</span>
+              </label>
+            </li>
+          </ul>
+          <input class="delivery-modal__btn btn-modal" type="submit" value="Выбрать">
+        </form>
+      </div>
+      <div class="modal-container"></div>
+    </div>
+
     <script src="script/scriptTotal.js"></script>
     <script src="script/changeText.js"></script>
     <script src="script/inputValid.js"></script>
     <script src="script/popupInfo.js"></script>
     <script src="script/collapse.js"></script>
+    <script src="script/modalBtn.js"></script>
   </body>
 </html>

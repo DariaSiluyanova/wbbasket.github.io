@@ -1,6 +1,7 @@
 :root {
     --bg-header-footer: #6725A8;
     --bg-main: #f6f6fA;
+    --bg-modal: rgba(0,0,0,0.3);
     --bg-checkbox: #CB11AB;
     --border-color: #DDDDE1;
     --font-grey: #9797AF;
@@ -70,12 +71,20 @@ ol, ul {
     list-style: none;
 }
 
+button {
+    cursor: url(./images/icons/cursor-pointer.svg) 5 5, pointer;
+}
+
 body {
     font-family: 'SegoeUI', sans-serif;
     font-weight: 200;
     font-size: 16px;
     line-height: 24px;
     background-color: var(--bg-main);
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .order {
@@ -634,6 +643,29 @@ body {
     cursor: url(./images/icons/cursor-pointer.svg) 5 5, pointer;
 }
 
+.collapse.collapse--cart .collapse__btn,
+.collapse.collapse--missing .collapse__btn {
+    transition: 20s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.collapsed-title {
+    display: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.collapsed-title__price {
+    margin-left: 5px;
+}
+
+.collapsed-title__items {
+    margin-right: 5px;
+}
+
 .delivery__return__popup {
     display: none;
     position: absolute;
@@ -1037,7 +1069,12 @@ body {
 
 
 @media (min-width: 321px) {
+    .main-body {
+        position: relative;
+    }
+
     main {
+        position: relative;
         font-size: 13px;
         line-height: 16px;
     }
@@ -1053,6 +1090,124 @@ body {
 
     .laptop {
         display: block;
+    }
+
+    /*popup*/
+
+    .delivery-container {
+        display: none;
+    }
+
+    .modal-container {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-modal);
+    }
+
+    .delivery-modal {
+        position: fixed;
+        top: 15%;
+        right: 30%;
+        width: 400px;
+        height: 408px;
+        padding: 16px 24px 24px;
+        border-radius: 16px;
+        box-shadow: 0px 4px 10px 0px #00000033;
+        z-index: 100;
+        background-color: var(--labels);
+    }
+
+
+    .delivery-modal__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 13px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+
+    .delivery-modal__close {
+        width: 2px;
+        height: 20px;
+        background-color: var(--missing-font);
+        border-radius: 5px;
+        transform: rotate(45deg);
+    }
+
+    .delivery-modal__close:before {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 20px;
+        background-color: var(--missing-font);
+        border-radius: 5px;
+        transform: rotate(90deg);
+    }
+
+    .delivery-modal__cards {
+        display: flex;
+        flex-direction: column;
+        height: 20.25em;
+    }
+
+    .delivery-modal__btn {
+        margin-top: auto;
+    }
+
+    .btn-modal {
+        width: 10.25em;
+        height: 2.75em;
+        border-radius: 0.5em;
+        background-color: var(--bg-checkbox);
+        font-weight: 700;
+        color: var(--labels);
+    }
+
+    .item-card__label {
+        display: flex;
+        gap: 10px;
+    }
+
+    .item-card__radio[type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        margin: 0;
+        display: grid;
+        place-content: center;
+        width: 1em;
+        height: 1em;
+        font: inherit;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+    }
+
+    .item-card__radio[type="radio"]::before {
+        content: "";
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 0px 0px 0px 0.25em var(--bg-checkbox);
+    }
+
+    .item-card__radio[type="radio"]:checked::before {
+        transform: scale(1);
+    }
+
+    .cards-list__item+.cards-list__item {
+        margin-top: 1em;
+    }
+
+    .item-card__icon {
+        width: 2em;
+        height: 1.5em;
+        background-color: var(--bg-main);
     }
 
     .form__cart,

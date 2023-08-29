@@ -24,21 +24,24 @@
 const btnCollapse = document.querySelector(".collapse.collapse--cart");
 const btnCollapseMissing = document.querySelector(".collapse.collapse--missing");
 const checkboxAll = document.querySelector(".choose-all-container")
+const cartCollapsedTitle = document.querySelector(".collapsed-title")
 let firstElem = document.querySelector(".checkbox--choose-all");
 let firstElemMissing = document.querySelector(".missing-items__header");
 
-console.log(btnCollapse)
 /**function сворачивание элементов корзины*/
 btnCollapse.addEventListener('click', function() {
     let collapse = firstElem.nextElementSibling; 
-    console.log(this)
     if (collapse.style.display === "block") {
+        checkboxAll.style.display = "none";
         collapse.style.display = "none";
+        cartCollapsedTitle.style.display = "flex"
     }
     else {
+        checkboxAll.style.display = "block";
         collapse.style.display = "block";
+        cartCollapsedTitle.style.display = "none"
     }
-    
+    this.classList.toggle("rotate")
 })
 
 /**function сворачивание отсутствующих товаров*/
@@ -51,5 +54,6 @@ btnCollapseMissing.addEventListener('click', function() {
     else {
         collapseMissing .style.display = "block";
     }
+    this.classList.toggle("rotate")
     
 })
