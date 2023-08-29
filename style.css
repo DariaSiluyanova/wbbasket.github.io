@@ -1119,6 +1119,10 @@ body {
         background-color: var(--labels);
     }
 
+    .delivery-modal--address {
+        width: 500px;
+    }
+
 
     .delivery-modal__title {
         display: flex;
@@ -1172,6 +1176,22 @@ body {
         gap: 10px;
     }
 
+    .item-card__container--address,
+    .item-card__container--address .item-card__label {
+        align-items: center;
+    }
+
+    .item-card--address {
+        padding: 0.25em 0 0.5em;
+    }
+
+    .delivery-modal__subTitle {
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+    }
+
     .item-card__radio[type="radio"] {
         -webkit-appearance: none;
         appearance: none;
@@ -1204,10 +1224,19 @@ body {
         margin-top: 1em;
     }
 
+    .item-card--address+.item-card--address {
+        margin-top: 0.5em;
+    }
+
     .item-card__icon {
         width: 2em;
         height: 1.5em;
         background-color: var(--bg-main);
+    }
+
+    .item-card__container {
+        display: grid;
+        grid-template-columns: 15fr 1fr;
     }
 
     .form__cart,
