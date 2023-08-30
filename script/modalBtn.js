@@ -1,25 +1,28 @@
-const btnModalPayClose = document.querySelector(".delivery-modal__close")
-const modalPay = document.querySelector(".delivery-container")
-const btnModalPayOpen = document.querySelector(".btn-edit")
 const bodyElem = document.querySelector(".main-body")
+const delivery = document.querySelector(".delivery")
+const modalPay = document.querySelector(".delivery-container")
+const modalAddress = document.querySelector(".delivery-container--address")
+const payment = document.querySelector(".form__payment")
 
-
-
-
-/**function, добавляет слушатель на кнопку модалки, чтобы закрыть окно
- **/
-btnModalPayClose.addEventListener('click', function() {
-    modalPay.style.display = "none"
-    bodyElem.classList.remove("no-scroll")
-    enableScroll()
-})
+const modalOpenClose = (domElement, modal) => {
 /**function, добавляет слушатель на кнопку Изменить, чтобы открыть окно
  **/
-btnModalPayOpen.addEventListener('click', function() {
-    modalPay.style.display = "block"
-    bodyElem.classList.add("no-scroll")
-    disableScroll()
-})
+    domElement.querySelector(".btn-edit").addEventListener('click', function() {
+        modal.style.display = "block"
+        bodyElem.classList.add("no-scroll")
+        disableScroll()
+    })
+/**function, добавляет слушатель на кнопку модалки, чтобы закрыть окно
+ **/
+    modal.querySelector(".delivery-modal__close").addEventListener('click', function() {
+        modal.style.display = "none"
+        bodyElem.classList.remove("no-scroll")
+        enableScroll()
+    })
+}
+modalOpenClose(payment, modalAddress)
+modalOpenClose(delivery, modalPay)
+
 
 /**function, убирает автоскролл браузера к невалидному инпуту
  **/
