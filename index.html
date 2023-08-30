@@ -935,7 +935,8 @@
                 name="user_firstname"
                 value=""
                 pattern="[A-Za-zА-Яа-яЁё]"
-                oninput="validValueName()"
+                oninput="validName()"
+                required
               />
               <div id="errorName" class="errorMsg"></div>
             </label>
@@ -948,7 +949,8 @@
                 type="text"
                 name="user_secondName"
                 value=""
-                oninput="validValueSecondName()"
+                oninput="validSecondName()"
+                required
               />
               <div id="errorSecondName" class="errorMsg"></div>
             </label>
@@ -960,6 +962,7 @@
                 class="info-input"
                 type="email"
                 name="user_email"
+                oninput="validEmail()"
                 id="email"
               />
               <div id="errorEmail" class="errorMsg"></div>
@@ -969,10 +972,9 @@
               <input
                 class="info-input"
                 type="tel"
-                value="+7"
-                pattern="^\+7(\s+)?[0-9]{3}?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$"
-                maxlength="12"
+                maxlength="30"
                 name="user_phone"
+                oninput="validTel()"
                 id="phone"
               />
               <div id="errorTel" class="errorMsg"></div>
@@ -983,6 +985,7 @@
                 class="info-input"
                 type="number"
                 name="user_inn"
+                oninput="validValueInn()"
                 id="inn"
               />
               <div id="errorInn" class="errorMsg"></div>
