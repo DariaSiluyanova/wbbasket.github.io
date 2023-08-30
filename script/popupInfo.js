@@ -10,7 +10,6 @@ const popUpOnHover = (icon, popup) =>  {
   icon.addEventListener("mouseout", hidePopup);
   
   function hidePopup(evt) {
-    console.log("hover")
     popup.style.display = "none";
   }
   

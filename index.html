@@ -55,15 +55,11 @@
         <img
           class="header__search-icon"
           src="./images/icons/loopMob.svg"
-          alt="search"
-          class="search-icon"
-        />
+          alt="search">
         <input
           class="laptop search-input"
           type="search"
-          placeholder="Я ищу..."
-          class="laptop"
-        />
+          placeholder="Я ищу...">
       </div>
 
       <button class="laptop header__icon-personal">
@@ -71,10 +67,10 @@
           class="header__icon-profile"
           src="./images/icons/profile.svg"
           alt="profile"
-        />
+        >
       </button>
       <button class="laptop header__icon-personal">
-        <img src="./images/icons/cart.svg" alt="cart" />
+        <img src="./images/icons/cart.svg" alt="cart">
       </button>
     </header>
     <main class="main">
@@ -100,12 +96,12 @@
                     src="./images/icons/arrow.svg"
                     alt="collapse"
                     class="collapse__btn"
-                  />
+                  >
                 </button>
               </li>
 
-              <div class="list__items">
-                <li class="list__item item-section">
+              <li class="list__items">
+                <div class="list__item item-section">
                   <div class="cart-info-container">
                     <div class="list__item__info">
                       <input
@@ -114,7 +110,7 @@
                         value="1"
                         data-price="522"
                         id="checkbox--t-short"
-                      />
+                      >
                       <label
                         class="checkbox__label label-position checkbox__label--img"
                         for="checkbox--t-short"
@@ -129,13 +125,13 @@
                               ./images/white-t-shirt_content@3x.png 3x
                             "
                             alt="Футболка UZcotton мужская"
-                          />
+                          >
                         </a>
                       </label>
                       <div class="list__item__data">
                         <div class="mob-price list__item__mob-price">
                           <h3 class="mobile mob-price__item">
-                            522<spam class="unit">сом</spam>
+                            522<span class="unit">сом</span>
                           </h3>
                           <div class="old-price mobile">
                             <span class="old-price--cancel"
@@ -158,7 +154,7 @@
                             <img                           
                               src="./images/icons/info.svg"
                               alt="see additional info"
-                            />
+                            >
                           </span>
                         </p>
                       </div>
@@ -242,9 +238,9 @@
                       >
                     </div>
                   </div>
-                </li>
+                </div>
 
-                <li class="list__item item-section">
+                <div class="list__item item-section">
                   <div class="cart-info-container">
                     <div class="list__item__info">
                       <input
@@ -397,9 +393,9 @@
                       </div>
                     </div>
                   </div>
-                </li>
+                </div>
 
-                <li class="list__item item-section">
+                <div class="list__item item-section">
                   <div class="cart-info-container">
                     <div class="list__item__info">
                       <input
@@ -539,8 +535,8 @@
                       >
                     </div>
                   </div>
-                </li>
-              </div>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -952,7 +948,7 @@
                 oninput="validSecondName()"
                 required
               />
-              <div id="errorSecondName" class="errorMsg"></div>
+              <span id="errorSecondName" class="errorMsg"></span>
             </label>
           </div>
           <div class="user__contacts form-field">
@@ -965,7 +961,7 @@
                 oninput="validEmail()"
                 id="email"
               />
-              <div id="errorEmail" class="errorMsg"></div>
+              <span id="errorEmail" class="errorMsg"></span>
             </label>
             <label class="input-field user__input info-label" for="phone">
               <span class="input-label"><span class="input-label">Телефон</span></span>
@@ -977,7 +973,7 @@
                 oninput="validTel()"
                 id="phone"
               />
-              <div id="errorTel" class="errorMsg"></div>
+              <span id="errorTel" class="errorMsg"></span>
             </label>
             <label class="input-field user__input info-label" for="inn">
               <span class="input-label">ИНН</span>
@@ -988,7 +984,7 @@
                 oninput="validValueInn()"
                 id="inn"
               />
-              <div id="errorInn" class="errorMsg"></div>
+              <span id="errorInn" class="errorMsg"></span>
             </label>
           </div>
           <div class="input-field___info">Для таможенного оформления</div>
@@ -999,7 +995,7 @@
             <h2 class="details-title">Итого</h2>
             <span>
               <span class="total__sum details-title"></span> 
-              <spam class="unit">сом</spam>
+              <span class="unit">сом</span>
             </span>
           </div>
           <div class="total__details details-sum form-title">
@@ -1161,21 +1157,21 @@
               </label>
             </li>
             <li class="cards-list__item item-card item-card--payment">
-              <label class="item-card__label" for="mirCard">
+              <label class="item-card__label" for="visaCard">
                 <input class="item-card__radio" type="radio" name="payCard" id="visaCard"/>
                 <img class="item-card__icon" src="./images/icons/visa-pay.svg" alt="mirCard">
                 <span>1234 56•• •••• 1234</span>
               </label>
             </li>
             <li class="cards-list__item item-card item-card--payment">
-              <label class="item-card__label" for="mirCard">
+              <label class="item-card__label" for="masterCard">
                 <input class="item-card__radio" type="radio" name="payCard" id="masterCard"/>
                 <img class="item-card__icon" src="./images/icons/master-card-pay.svg" alt="mirCard">
                 <span>1234 56•• •••• 1234</span>
               </label>
             </li>
             <li class="cards-list__item item-card item-card--payment">
-              <label class="item-card__label" for="mirCard">
+              <label class="item-card__label" for="maestroCard">
                 <input class="item-card__radio" type="radio" name="payCard" id="maestroCard">
                 <img class="item-card__icon" src="./images/icons/maestro-card-pay.svg" alt="mirCard">
                 <span>1234 56•• •••• 1234</span>
@@ -1210,10 +1206,10 @@
           <ul class="cards-list">
             <li class="item-card item-card--address">
               <label class="item-card__container" for="address-1">
-                <div class="item-card__label--address">
+                <span class="item-card__label--address">
                   <input class="item-card__radio" type="radio" name="address" id="address-1" checked/>
                   <span class="item-card__address">Бишкек, улица Табышалиева, 57</span>
-                </div>
+                </span>
                 <svg
                     class="icon-cart"
                     viewBox="0 0 24 24"
@@ -1248,10 +1244,10 @@
             </li>
             <li class="item-card item-card--address">
               <label class="item-card__container" for="address-2">
-                <div class="item-card__label--address">
+                <span class="item-card__label--address">
                   <input class="item-card__radio" type="radio" name="address" id="address-2"/>
                   <span class="item-card__address">Бишкек, улица Жукеева-Пудовкина, 77/1</span>
-                </div>
+                </span>
                 <svg
                     class="icon-cart"
                     viewBox="0 0 24 24"
@@ -1286,10 +1282,10 @@
             </li>
             <li class="item-card item-card--address">
               <label class="item-card__container" for="address-3">
-                <div class="item-card__label--address">
+                <span class="item-card__label--address">
                   <input class="item-card__radio" type="radio" name="address" id="address-3" />
                   <span class="item-card__address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</span>
-                </div>
+                </span>
                 <svg
                     class="icon-cart"
                     viewBox="0 0 24 24"

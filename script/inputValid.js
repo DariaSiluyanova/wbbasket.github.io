@@ -8,6 +8,7 @@ const errorSecondName = document.getElementById("errorSecondName")
 const errorEmail = document.getElementById("errorEmail")
 const errorTel = document.getElementById("errorTel")
 const errorInn = document.getElementById("errorInn")
+const btnOrder = document.querySelector(".order")
 const patternName = /^[A-Za-zА-Яа-яЁё]+$/
 const patternEmail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/g
 const patternTel = /^\+(?:\s*\d){11}$/g
@@ -104,3 +105,15 @@ function validValueInn() {
         inn.classList.remove("invalid")
     }   
 }
+
+function order() {
+    btnOrder.addEventListener('click', function() {
+        [...document.querySelectorAll(".info-input")].forEach((input) => {
+            if(input.value.length === 0) {
+                input.classList.add("invalid")
+            }
+        })
+    })
+}
+
+order()
