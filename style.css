@@ -3,6 +3,7 @@
     --bg-main: #f6f6fA;
     --bg-modal: rgba(0,0,0,0.3);
     --bg-checkbox: #CB11AB;
+    --light-pink: rgba(203, 17, 171, 0.15);
     --border-color: #DDDDE1;
     --font-grey: #9797AF;
     --labels: #ffffff;
@@ -312,6 +313,10 @@ body {
 
 .cart-footer--pencils {
     padding-right: 0px;
+}
+
+.item-card--payment {
+    margin-bottom: 1em;
 }
 
 /*missing items*/
@@ -1110,6 +1115,8 @@ body {
         position: fixed;
         top: 15%;
         right: 30%;
+        display: flex;
+        flex-direction: column;
         width: 400px;
         height: 408px;
         padding: 16px 24px 24px;
@@ -1117,6 +1124,10 @@ body {
         box-shadow: 0px 4px 10px 0px #00000033;
         z-index: 100;
         background-color: var(--labels);
+    }
+
+    .delivery-modal--address {
+        padding: 16px 22px 22px;
     }
 
     .delivery-modal--address {
@@ -1155,7 +1166,6 @@ body {
     .delivery-modal__cards {
         display: flex;
         flex-direction: column;
-        height: 20.25em;
     }
 
     .delivery-modal__btn {
@@ -1171,13 +1181,14 @@ body {
         color: var(--labels);
     }
 
-    .item-card__label {
+    .item-card__label,
+    .item-card__label--address {
         display: flex;
         gap: 10px;
     }
 
     .item-card__container--address,
-    .item-card__container--address .item-card__label {
+    .item-card__label--address {
         align-items: center;
     }
 
@@ -1217,12 +1228,60 @@ body {
     }
 
     .item-card__radio[type="radio"]:checked::before {
+        content: "";
         transform: scale(1);
     }
 
-    .cards-list__item+.cards-list__item {
-        margin-top: 1em;
+    .tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
     }
+
+    .delivery-modal--address {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .delivery-modal__tabs {
+        margin-bottom: 1.5em;
+    }
+
+    .tabs__radio[type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        width: 100%;
+        height: 2.25em;
+        border: 2px solid var(--light-pink);
+        border-radius: 20px;
+    }
+
+    .tabs__radio[type="radio"]:checked::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2.25em;
+        box-shadow: inset 0 0 0 2px var(--bg-checkbox);
+        border-radius: 20px;
+    }
+
+    .tabs__label {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tabs__label span {
+        position: absolute;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+    };
 
     .item-card--address+.item-card--address {
         margin-top: 0.5em;

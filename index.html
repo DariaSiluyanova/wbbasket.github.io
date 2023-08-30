@@ -1143,28 +1143,28 @@
         </div>
         <form class="delivery-modal__cards">
           <ul class="cards-list">
-            <li class="cards-list__item item-card">
+            <li class="cards-list__item item-card item-card--payment">
               <label class="item-card__label" for="mirCard">
-                <input class="item-card__radio" type="radio" name="payCard" id="mirCard">
+                <input class="item-card__radio" type="radio" name="payCard" id="mirCard" checked/>
                 <img class="item-card__icon" src="./images/icons/mirpay.svg" alt="mirCard">
                 <span>1234 56•• •••• 1234</span>
               </label>
             </li>
-            <li class="cards-list__item item-card">
+            <li class="cards-list__item item-card item-card--payment">
               <label class="item-card__label" for="mirCard">
-                <input class="item-card__radio" type="radio" name="payCard" id="visaCard">
+                <input class="item-card__radio" type="radio" name="payCard" id="visaCard"/>
                 <img class="item-card__icon" src="./images/icons/visa-pay.svg" alt="mirCard">
                 <span>1234 56•• •••• 1234</span>
               </label>
             </li>
-            <li class="cards-list__item item-card">
+            <li class="cards-list__item item-card item-card--payment">
               <label class="item-card__label" for="mirCard">
-                <input class="item-card__radio" type="radio" name="payCard" id="masterCard">
+                <input class="item-card__radio" type="radio" name="payCard" id="masterCard"/>
                 <img class="item-card__icon" src="./images/icons/master-card-pay.svg" alt="mirCard">
                 <span>1234 56•• •••• 1234</span>
               </label>
             </li>
-            <li class="cards-list__item item-card">
+            <li class="cards-list__item item-card item-card--payment">
               <label class="item-card__label" for="mirCard">
                 <input class="item-card__radio" type="radio" name="payCard" id="maestroCard">
                 <img class="item-card__icon" src="./images/icons/maestro-card-pay.svg" alt="mirCard">
@@ -1172,29 +1172,36 @@
               </label>
             </li>
           </ul>
-          <input class="delivery-modal__btn btn-modal" type="submit" value="Выбрать">
+         
         </form>
+        <input class="delivery-modal__btn btn-modal" type="submit" value="Выбрать"/>
       </div>
       <div class="modal-container"></div>
     </div>
 
-    <div class="delivery-container" style="display: block;">
+    <div class="delivery-container">
       <div class="delivery-modal delivery-modal--address">
         <div class="delivery-modal__title">
           <span class="delivery-modal__text">Способ доставки</span>
           <button type="button" class="delivery-modal__close"></button>
         </div>
-        <div class="delivery-modal__tubs">
-          <div class="tub">В пункт выдачи</div>
-          <div class="tub">Курьером</div>
+        <div class="delivery-modal__tabs tabs">
+          <label class="tabs__label" >
+            <span>В пункт выдачи</span>
+            <input class="tabs__radio" type="radio" name="point" />
+          </label>
+          <label class=" tabs__label" >
+            <span>Курьером</span>
+            <input class="tabs__radio" type="radio" name="point" checked/>
+          </label>
         </div>
         <form class="delivery-modal__cards">
           <div class="delivery-modal__subTitle">Мои адреса</div>
           <ul class="cards-list">
             <li class="item-card item-card--address">
-              <label class="item-card__container" for="mirCard">
-                <div class="item-card__label">
-                  <input class="item-card__radio" type="radio" name="payCard" id="masterCard">
+              <label class="item-card__container" for="address-1">
+                <div class="item-card__label--address">
+                  <input class="item-card__radio" type="radio" name="address" id="address-1" checked/>
                   <span class="item-card__address">Бишкек, улица Табышалиева, 57</span>
                 </div>
                 <svg
@@ -1225,9 +1232,9 @@
               </label>
             </li>
             <li class="item-card item-card--address">
-              <label class="item-card__container" for="mirCard">
-                <div class="item-card__label">
-                  <input class="item-card__radio" type="radio" name="payCard" id="masterCard">
+              <label class="item-card__container" for="address-2">
+                <div class="item-card__label--address">
+                  <input class="item-card__radio" type="radio" name="address" id="address-2"/>
                   <span class="item-card__address">Бишкек, улица Жукеева-Пудовкина, 77/1</span>
                 </div>
                 <svg
@@ -1258,9 +1265,9 @@
               </label>
             </li>
             <li class="item-card item-card--address">
-              <label class="item-card__container" for="mirCard">
-                <div class="item-card__label">
-                  <input class="item-card__radio" type="radio" name="payCard" id="masterCard">
+              <label class="item-card__container" for="address-3">
+                <div class="item-card__label--address">
+                  <input class="item-card__radio" type="radio" name="address" id="address-3" />
                   <span class="item-card__address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</span>
                 </div>
                 <svg
@@ -1291,8 +1298,8 @@
               </label>
             </li>
           </ul>
-          <input class="delivery-modal__btn btn-modal" type="submit" value="Выбрать">
         </form>
+        <input class="delivery-modal__btn btn-modal" type="submit" value="Выбрать"/>
       </div>
       <div class="modal-container"></div>
     </div>
