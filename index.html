@@ -547,7 +547,7 @@
           <div class="missing-items form__missing">
             <div class="missing-items__header">
               <h3 class="missing-items__title form-title">
-                Отсутствуют &#8226;<span>&nbsp;3 товара</span>
+                Отсутствуют&#8226;<span><span class="laptop">&nbsp;</span>3 товара</span>
               </h3>
               <button type="button" class="collapse collapse--missing">
                 <img
@@ -935,10 +935,12 @@
                 name="user_firstname"
                 value=""
                 pattern="[A-Za-zА-Яа-яЁё]"
+                oninput="validValueName()"
               />
               <div id="errorName" class="errorMsg"></div>
-             </label>
-             <label class="input-field user__input info-label" for="secondName">
+            </label>
+
+            <label class="input-field user__input info-label" for="secondName">
               <span class="input-label">Фамилия</span>
               <input
                 class="info-input"
@@ -946,8 +948,10 @@
                 type="text"
                 name="user_secondName"
                 value=""
+                oninput="validValueSecondName()"
               />
-             </label>
+              <div id="errorSecondName" class="errorMsg"></div>
+            </label>
           </div>
           <div class="user__contacts form-field">
             <label class="input-field user__input info-label" for="email">
@@ -958,6 +962,7 @@
                 name="user_email"
                 id="email"
               />
+              <div id="errorEmail" class="errorMsg"></div>
             </label>
             <label class="input-field user__input info-label" for="phone">
               <span class="input-label"><span class="input-label">Телефон</span></span>
@@ -970,6 +975,7 @@
                 name="user_phone"
                 id="phone"
               />
+              <div id="errorTel" class="errorMsg"></div>
             </label>
             <label class="input-field user__input info-label" for="inn">
               <span class="input-label">ИНН</span>
@@ -979,6 +985,7 @@
                 name="user_inn"
                 id="inn"
               />
+              <div id="errorInn" class="errorMsg"></div>
             </label>
           </div>
           <div class="input-field___info">Для таможенного оформления</div>
@@ -1011,7 +1018,7 @@
             <div class="laptop addition__date-info">
               <div class="addition__header">
                 <h4 class="form-title">Доставка в пункт выдачи</h4>
-                <button class="addition__btn">
+                <button class="addition__btn btn-edit">
                   <img src="./images/icons/pencil.svg" alt="icon-change" />
                 </button>
               </div>
@@ -1043,7 +1050,7 @@
             <div class="laptop additional-block__card">
               <div class="addition__header">
                 <h4 class="form-title">Оплата картой</h4>
-                <button class="addition__btn">
+                <button class="addition__btn btn-edit">
                   <img src="./images/icons/pencil.svg" alt="icon-edit" />
                 </button>
               </div>
