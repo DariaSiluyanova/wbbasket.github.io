@@ -25,7 +25,9 @@ const setTotal = (val) => {
 /**function, суммирует стоимость отдельных товаров
  * @param val - сумма покупки
  */
-document.querySelectorAll(".checkbox").forEach((item) => {
+const listInput = document.querySelector(".list__items")
+
+listInput.querySelectorAll(".checkbox").forEach((item) => {
     item.addEventListener('click', function() {
       if(this.checked) {
         totalCost += subSum(this)
