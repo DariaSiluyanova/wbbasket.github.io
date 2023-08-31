@@ -1,5 +1,11 @@
 let totalCost = 0;
 const chooseAll = document.querySelector(".checkbox--choose-all").querySelector("input")
+const listInput = document.querySelector(".list__items")
+const ACTION = {
+  PLUS: 'plus',
+  MINUS: 'minus'
+}
+
 /**
  * Функция рассчета суммы товара и итоговой суммы корзины 
  */
@@ -23,8 +29,7 @@ const setTotal = (val) => {
   totalPrice.dataset.value = val;
 }
 
-const listInput = document.querySelector(".list__items")
-
+/**function - выбор отдельных товаров по нажатию на чекбокс */
 let checkboxCounter = function () {
     listInput.querySelectorAll(".checkbox").forEach((item) => {
       item.addEventListener('click', function() {
@@ -67,28 +72,23 @@ const totalCount = () => {
   setTotal(totalCost);
 };
 
-const ACTION = {
-  PLUS: 'plus',
-  MINUS: 'minus'
-}
-
-
+/**функция рассчета стоимости отдельных товаров по клику на кнопку количества товара */
 const calculateAmount = (item, action) => {
   const inputData = item.querySelector(".checkbox")
-  let amount = item.querySelector('.amount-btn__amount')
+  let amount = item.querySelector(".amount-btn__amount")
 
   switch(action) {
     case ACTION.PLUS:
       inputData.value++;
       amount.textContent = inputData.value;
       if (inputData.checked) {
-        setTotal(Number(totalPrice.dataset.value) + Number(inputData.dataset.price));
+          setTotal(Number(totalPrice.dataset.value) + Number(inputData.dataset.price));
       }
       break;
     case ACTION.MINUS:
-      if (inputData.value > 0) {
-      inputData.value--;
-      amount.textContent = inputData.value;
+      if (inputData.value > 1) {
+        inputData.value--;
+        amount.textContent = inputData.value;
       if (inputData.checked) {
          setTotal(Number(totalPrice.dataset.value) - Number(inputData.dataset.price));
       }
@@ -98,6 +98,7 @@ const calculateAmount = (item, action) => {
   item.querySelector('.cart-price__price').textContent = totalFormat(subSum(inputData))
 }
 
+/**функция, описывающая поведение на нажатие на кнопки + и - */
 document.querySelector('.form__cart').addEventListener('click', (event) => {
   if (event.target.classList.contains('amount-btn__minus')) {
     calculateAmount(event.target.closest('.list__item'), ACTION.MINUS)
