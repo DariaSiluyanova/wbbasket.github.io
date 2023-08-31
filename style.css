@@ -522,6 +522,10 @@ body {
 }
 
 /*инпут*/ 
+.user__input {
+    position: relative;
+}
+
 .input-field{
     background-color: inherit;
     border-bottom: 1px solid var(--border-color);
@@ -529,7 +533,10 @@ body {
 
 .errorMsg {
     position: absolute;
-    font-size: 12px;
+    left: 0;
+    bottom: -20px;
+    font-size: 10px;
+    letter-spacing: 0;
     color: var(--orange);
 }
 
