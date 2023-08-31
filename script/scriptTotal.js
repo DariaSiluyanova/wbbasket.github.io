@@ -1,4 +1,5 @@
 let totalCost = 0;
+const chooseAll = document.querySelector(".checkbox--choose-all").querySelector("input")
 /**
  * Функция рассчета суммы товара и итоговой суммы корзины 
  */
@@ -22,25 +23,41 @@ const setTotal = (val) => {
   totalPrice.dataset.value = val;
 }
 
+const listInput = document.querySelector(".list__items")
+
+let checkboxCounter = function () {
+    listInput.querySelectorAll(".checkbox").forEach((item) => {
+      item.addEventListener('click', function() {
+        if(this.checked) {
+          totalCost += subSum(this)
+        }
+        if(!this.checked) {
+          totalCost -= subSum(this)
+        }
+        setTotal(totalCost)
+      })
+    }
+  )
+}
+
+/**function - выбор всех товаров по нажатию на кнопку Выбрать все */
+chooseAll.addEventListener('click', function() {
+  listInput.querySelectorAll(".checkbox").forEach((item) => {        
+      item.checked = !item.checked
+      if (item.checked) {
+        totalCost += subSum(item)
+      }
+
+      if (!item.checked) {
+        totalCost -= subSum(item)
+      }
+  })
+  setTotal(totalCost)
+})
+
 /**function, суммирует стоимость отдельных товаров
  * @param val - сумма покупки
  */
-const listInput = document.querySelector(".list__items")
-
-listInput.querySelectorAll(".checkbox").forEach((item) => {
-    item.addEventListener('click', function() {
-      if(this.checked) {
-        totalCost += subSum(this)
-      }
-      if(!this.checked) {
-        totalCost -= subSum(this)
-      }
-      setTotal(totalCost)
-    })
-    
-  }
-)
-
 const totalCount = () => {
   [...document.querySelectorAll(".list__item ")].forEach((item) => {
     if(item.querySelector(".checkbox").checked){
@@ -92,3 +109,4 @@ document.querySelector('.form__cart').addEventListener('click', (event) => {
 })
 
 totalCount();
+checkboxCounter();
