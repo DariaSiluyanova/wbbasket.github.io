@@ -955,7 +955,7 @@ body {
 }
 /*popup*/
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
     body {
         font-size: 14px;
         line-height: 20px;
@@ -1356,7 +1356,7 @@ body {
 }
 
 
-@media (min-width: 321px) {
+@media (min-width: 426px) {
     .main-body {
         position: relative;
     }
