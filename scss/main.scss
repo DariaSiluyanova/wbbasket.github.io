@@ -1,0 +1,25 @@
+:root {
+    --bg-header-footer: #6725A8;
+    --bg-main: #f6f6fA;
+    --bg-modal: rgba(0,0,0,0.3);
+    --bg-checkbox: #CB11AB;
+    --light-pink: rgba(203, 17, 171, 0.15);
+    --border-color: #DDDDE1;
+    --font-grey: #9797AF;
+    --labels: #ffffff;
+    --disabled: #cccccc;
+    --active-amount: #000000;
+    --attention: #FF3B30;
+    --missing-font: #A0A0A4;
+    --orange: #F55123;
+    --green: #45C597;
+    --additional: #F0ECF4;
+    --hover-word: #0CB477;
+    --underline: #E6E6E6;
+    --bg-input: #8551B9;
+    --placeholder: #c2a8bc;
+}
+
+
+@import "./general.scss";
+@import "./fonts.scss"
