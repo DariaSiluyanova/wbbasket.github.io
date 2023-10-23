@@ -1,0 +1,124 @@
+/*инпут*/ 
+.user__input {
+    position: relative;
+
+    @media (max-width: 425px) { 
+        letter-spacing: 0.07em;
+    }
+}
+
+.input-field{
+    background-color: inherit;
+    border-bottom: 1px solid var(--border-color);
+
+    @media (max-width: 425px) {
+        display: block;   
+        position: relative;
+        width: 100%;
+        padding-top: 0.45em;
+        font-size: 1em;
+        line-height: 1.85em;
+    }
+
+    @media (min-width: 426px) { 
+        flex-grow: 1;
+        width: 180px;
+        height: 45px;
+        padding-top: 20px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.input-field___info {
+    @media (max-width: 425px) { 
+        font-size: 0.85em;
+    }
+
+    @media (min-width: 426px) { 
+        padding-top: 3px;
+        padding-right: 13px;
+        text-align: end;
+        font-size: 12px;
+    }
+
+    @media (min-width: 1025px) {
+        max-width: 668px;
+    }
+}
+
+.info-input {
+    @media (max-width: 425px) { 
+        width: 100%;
+    }
+
+    @media (min-width: 426px) {    
+        width: 100%;
+        padding: 3px;
+        font-size: 16px;
+        outline-color: var(--labels);
+    }
+}
+
+.info-label .input-label {
+    @media (max-width: 425px) { 
+        position: absolute;
+        top: -6px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0;
+    }
+}
+
+.input-label {
+    @media (max-width: 425px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: 426px) {
+        padding-top: 0px;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--missing-font);
+    }
+}
+
+.errorMsg {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    font-size: 10px;
+    letter-spacing: 0;
+    color: var(--orange);
+}
+
+.invalid {
+    color: var(--orange);
+    border-bottom: 1px solid var(--orange);
+}
+
+
+.user-info__title {
+    @media (max-width: 425px) { 
+        margin-bottom: 20px;
+    }
+}
+
+.form-field {
+    @media (min-width: 426px) { 
+        display: flex;
+        justify-content: space-between;
+        margin-top: 17px;
+    }
+
+    @media (min-width: 1025px) {
+        max-width: 700px;
+        margin-top: 18px;
+    }
+}
+
+.form__user-info { 
+    @media (min-width: 426px) {
+        margin-bottom: 57px;
+    }
+}

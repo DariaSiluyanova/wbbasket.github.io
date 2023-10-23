@@ -1,0 +1,130 @@
+.header, .footer {
+    background-color: var(--bg-header-footer)
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+
+    @media (max-width: 425px) {
+        padding: 11px 16px 35px 11px;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 1.5px;
+    }
+
+    @media (min-width: 426px) {
+        position: relative;
+        padding: 20px 20px 33px 24px;
+    }
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    height: 24px;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background: var(--bg-main);
+
+    @media (max-width: 425px) {
+        bottom: -3px
+    }
+
+    @media (min-width: 426px) {
+        bottom: -5px
+    }
+}
+
+.header__search {
+    @media (max-width: 425px) {
+        align-self: self-end;
+    }
+
+    @media (min-width: 426px) {
+        position: relative;
+        align-self: baseline;
+        flex-grow: 10.5;
+    }
+
+    @media (min-width: 1025px) {
+        flex-grow: 22.5;
+    }
+}
+
+.header-title {
+    @media (max-width: 425px) {
+        align-self: center;
+    }
+
+    @media (min-width: 426px) {
+        padding-left: 18px;
+        padding-right: 20px;
+        max-width: 155px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
+
+.bg-btn {
+    background-color: var(--bg-header-footer);
+
+    @media (min-width: 426px) {
+        width: 47px;
+        height: 47px;
+        padding-right: 8px;
+        border: 1px solid var(--placeholder);
+        border-radius: 7px;
+    }
+}
+
+.search-input {
+    @media (min-width: 426px) {
+        height: 47px;
+        width: 100%;
+        padding: 0px 19px;
+        font-size: 17px;
+        background-color: var(--bg-input);
+        border-radius: 26px;
+    }
+}
+
+.search-input::placeholder {
+    @media (min-width: 426px) {
+        color: var(--placeholder);
+    }
+}
+
+.header__search-icon {
+    @media (min-width: 426px) {
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        height: 23px;
+        width: 25px;
+        border-radius: 30px;
+        background-color: inherit;
+    }
+}
+
+.header__icon-personal {
+    @media (min-width: 426px) {
+        flex-grow: 1;
+        margin-top: -9px;
+        text-align: end;
+        background-color: inherit;
+    }
+}
+
+.header__icon-profile {
+    @media (min-width: 426px) {
+        margin-right: 8px;
+    }
+}

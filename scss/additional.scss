@@ -1,0 +1,237 @@
+.total__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total__title {
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 4px;
+
+    @media (min-width: 426px) { 
+        margin-bottom: 6px;
+    }
+}
+
+.total__sum {
+    font-size: 20px;
+}
+
+.total__details {
+    margin-bottom: 1.1em;
+
+    @media (min-width: 426px) {  
+        margin-bottom: 1.5em;
+    }
+}
+
+.details-sum {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.addition__info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    line-height: 17px;
+}
+
+.additional-block {
+    font-size: 13px;
+    background-color: var(--additional);
+    border-radius: 0.5rem;
+
+    @media (max-width: 425px) {
+        padding: 6px 7px 11px;
+    }
+
+    @media (min-width: 426px) {
+        padding: 8px 8px 11px 7px
+    }
+
+    @media (min-width: 1025px) {
+        padding: 5px 8px 11px 8px;
+    }
+
+}
+
+.additional-block--laptop {
+    @media (min-width: 426px) {
+        padding: 8px 0 0;
+        background-color: var(--labels);
+    }
+
+    @media (min-width: 1025px) {
+        padding: 8px 2px;
+    }
+}
+
+.additional-block__card {
+    @media (min-width: 426px) {  
+        margin-bottom: 17px;
+    }
+}
+
+.addition__icon-check {
+    padding-top: 0.35rem;
+    padding-right: 0.465rem;
+}
+
+.additional__info__free {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    color: var(--hover-word);
+}
+
+.addition__header {
+    @media (min-width: 426px) {  
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.addition__btn {
+    @media (min-width: 426px) {  
+        padding-top: 3px;
+        background-color: var(--labels);
+    }
+}
+
+.addition__address {
+    @media (min-width: 426px) {
+        margin-bottom: 5px;
+    }
+}
+
+.addition__date {
+    @media (min-width: 426px) { 
+        color: var(--bg-checkbox);
+    }
+}
+
+.addition__date-info {
+    @media (min-width: 426px) { 
+        margin-bottom: 12px;
+    }
+
+    @media (min-width: 1025px) {
+        margin-bottom: 14px;
+    }
+}
+
+.form__additional-block {
+    @media (max-width: 425px) { 
+        margin-bottom: 25px;
+    }
+}
+.phone-label {
+    @media (max-width: 425px) { 
+        position: relative;
+    }
+}
+
+.write-off-money {
+    position: relative;
+    font-size: 13px;
+
+    @media (min-width: 426px) {  
+        padding: 7px 0 10px 7px;
+        border-radius: 12px;
+        background-color: var(--additional);
+    }
+
+    @media (min-width: 1025px) {
+        padding-top: 9px;
+    }
+}
+
+.additional__agreement {
+    display: flex;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--active-amount);
+}
+
+.additional-block__checkbox {
+    @media (min-width: 426px) {  
+        margin-bottom: 28px;
+    }
+
+    @media (min-width: 1025px) {
+        margin-bottom: 18px;
+    }
+}
+
+.additional-block__info {
+    @media (min-width: 426px) { 
+        padding-top: 4px;
+    }
+}
+
+.icon__agree {
+    margin-right: 7px;
+
+    @media (min-width: 1025px) {
+        margin-right: 0px
+    }
+}
+
+.agreement__text {
+    padding-top: 2px;
+
+    @media (min-width: 426px) {  
+        padding: 2px 18px 8px 3px;
+    }
+}
+
+.btn-modal {
+    width: 10.25em;
+    height: 2.75em;
+    border-radius: 0.5em;
+    background-color: var(--bg-checkbox);
+    font-weight: 700;
+    color: var(--labels);
+
+    @media (max-width: 425px) {
+        width: 100%;
+        height: 44px;
+    }
+
+    @media (min-width: 426px) {
+        width: 10.25em;
+        height: 2.75em;
+    }
+}
+
+.delivery-container,
+.delivery-container--address {
+    display: block;
+}
+
+.item-card__label,
+.item-card__label--address {
+    display: flex;
+    gap: 10px;
+}
+
+.item-card__container--address,
+.item-card__label--address {
+    align-items: center;
+}
+
+.item-card--address {
+    padding: 0.25em 0 0.5em;
+}
+
+.card-payment {
+    @media (min-width: 426px) {  
+        padding-top: 4px;
+    }
+}
+
+.card-payment__icon {
+    @media (min-width: 426px) {  
+        margin-right: 7px;
+    }
+}

@@ -1,0 +1,87 @@
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox--choose-all {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 16px;
+    
+    @media (max-width: 425px) {
+        padding-bottom: 14px;
+    }
+
+    @media (min-width: 426px) {    
+        padding: 8px 0px 16px;
+    }
+
+    @media (min-width: 1025px) {
+        padding: 9px 2px 14px;
+    }
+}
+
+.checkbox+.checkbox__label {
+    display: inline-flex;
+    user-select: none;
+    
+    @media (max-width: 425px) {
+        align-items: center;
+    }
+
+    @media (min-width: 426px) {  
+        align-items: self-start;
+    }
+}
+
+.checkbox+.checkbox__label::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 11px;
+    border: 1px solid #adb5bd;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+
+    @media (min-width: 426px) {
+        margin-right: 10px;
+    }
+}
+
+.checkbox:checked+.checkbox__label::before {
+    border-color: var(--bg-checkbox);
+    background-color: var(--bg-checkbox);
+    background-image: url("./images/icons/agree.svg");
+    background-size: 12px;
+}
+
+.collapse.collapse--cart .collapse__btn,
+.collapse.collapse--missing .collapse__btn {
+    transition: 20s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.collapsed-title {
+    display: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.collapsed-title__price {
+    margin-left: 5px;
+}
+
+.collapsed-title__items {
+    margin-right: 5px;
+}
