@@ -1,0 +1,123 @@
+.delivery-modal__subTitle {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.item-card__radio[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    width: 1em;
+    height: 1em;
+    font: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.item-card__radio[type="radio"]::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 0px 0px 0px 0.25em var(--bg-checkbox);
+}
+
+.item-card__radio[type="radio"]:checked::before {
+    content: "";
+    transform: scale(1);
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+}
+
+.delivery-modal--address {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-modal__tabs {
+    margin-bottom: 1.5em;
+}
+
+.tabs__radio[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    width: 100%;
+    height: 2.25em;
+    border: 2px solid var(--light-pink);
+    border-radius: 20px;
+}
+
+.tabs__radio[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2.25em;
+    box-shadow: inset 0 0 0 2px var(--bg-checkbox);
+    border-radius: 20px;
+}
+
+.tabs__label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs__label span {
+    position: absolute;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+};
+
+.item-card--address+.item-card--address {
+    margin-top: 0.5em;
+}
+
+.item-card__icon {
+    width: 2em;
+    height: 1.5em;
+    background-color: var(--bg-main);
+}
+
+.item-card__container {
+    display: grid;
+    grid-template-columns: 15fr 1fr;
+}
+
+.delivery-container,
+.delivery-container--address {
+    display: none;
+}
+
+.total--modal {
+    @media (min-width: 426px) {
+        position: absolute;
+        width: 30%;
+        top: 9px;
+        right: 22px;
+        padding: 8px 26px 16px 25px;
+        border-radius: 16px;
+        background-color: var(--labels);
+    }
+
+    @media (min-width: 1025px) {
+        width: 31%;
+        padding: 9px 28px 16px 26px;
+    }
+}

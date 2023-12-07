@@ -1,0 +1,29 @@
+.order {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 3.35em;
+    border-radius: 0.8em;
+    background-color: var(--bg-checkbox);
+    color: var(--labels);
+}
+
+.order__btn {
+    visibility: hidden;
+}
+
+.order__text {
+    position: absolute;
+    width: 100%;
+    top: 27%;
+    text-align: center;
+    font-weight: 700;
+
+    @media (max-width: 425px) { 
+        font-size: 1.1em;
+    }
+
+    @media (min-width: 426px) {  
+        font-size: 16px;
+    }
+}

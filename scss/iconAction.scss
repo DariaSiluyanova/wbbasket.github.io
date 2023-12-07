@@ -1,0 +1,21 @@
+.icon-cart:hover {
+    cursor: url(./images/icons/cursor-pointer.svg) 5 5, pointer;
+}
+
+.icon-cart:hover .icon-cart--path{
+    stroke: var(--attention);
+}
+
+.icon-missing-react:hover {
+    cursor: url(./images/icons/cursor-pointer.svg) 5 5, pointer;
+}
+
+.icon-missing-react:hover .icon-missing-react--path {
+    stroke: var(--bg-checkbox);
+}
+
+.icon-missing {
+    @media (min-width: 426px) {    
+        margin-right: 14px;
+    }
+}

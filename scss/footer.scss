@@ -1,0 +1,34 @@
+.footer {
+    text-align: center;
+    color: var(--labels);
+
+    @media (max-width: 425px) { 
+        padding: 45px 0 0;
+    }
+
+    @media (min-width: 426px) {
+        padding: 36px 0 1px;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+    }
+}
+
+.footer__copyrights {
+    margin-bottom: 20px;
+}
+.navigation__svg {
+    position: relative;
+}
+
+.navigation__svg::before {
+    content: "";
+    display: block;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    border-radius: 10px;
+}

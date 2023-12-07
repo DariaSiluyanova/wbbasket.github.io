@@ -1,0 +1,359 @@
+/*Delivery*/
+.product-img {
+    width: 40px;
+    height: 56px;
+
+    @media (max-width: 425px) { 
+        width: 40.93px;
+        height: 56px;
+    }
+}
+
+.delivery {
+    position: relative;
+    background-color: var(--labels);
+
+    @media (max-width: 425px) { 
+        padding: 0 15px 0;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.05px;
+    }
+    
+    @media (min-width: 426px) {   
+        padding: 0 24px 0;
+    }
+    
+}
+
+.delivery::before,
+.payment::before,
+.user-info::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: var(--labels);
+    border-radius: 16px 16px 0 0 ;
+
+    @media (max-width: 425px) { 
+        top: -20px;
+        height: 21px;
+    }
+}
+
+.payment::before {
+    @media (max-width: 425px) { 
+        height: 20px;
+    }
+}
+
+.user-info::before {
+    @media (max-width: 425px) { 
+        top: -20px;
+    }
+
+    @media (min-width: 426px) {
+        top: -12px
+    }
+}
+
+.delivery::after,
+.payment::after,
+.user-info::after,
+.total::after,
+.form::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: var(--labels);
+    border-radius: 0 0 25px 25px ;
+}
+
+.total::after {
+    bottom: -32px;
+    height: 25px;
+    background-color: var(--bg-main);
+}
+
+.form::after {
+    bottom: -74px;
+    background-color: var(--bg-main);
+}
+
+.cart-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-edit {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bg-checkbox);
+    background-color: var(--labels);
+
+    @media (max-width: 425px) { 
+        padding-top: 4px;
+    }
+
+    @media (min-width: 426px) {
+        padding-top: 12px;
+    }
+}
+
+.delivery__point {
+    margin-bottom: 16px;
+}
+
+.delivery__point__title {
+    font-size: 16px;
+    font-weight: 400;
+
+    @media (min-width: 426px) {   
+        width: 31.3%;
+    }
+
+    @media (min-width: 1025px) {
+        width: 22%;
+    }
+}
+
+.delivery__point__address {
+    margin-bottom: 3px;
+}
+
+.delivery__point__info {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.delivery__price {
+    margin-bottom: 16px;
+}
+
+.products {
+    @media (max-width: 425px) { 
+        padding-top: 11px;
+    }
+}
+
+.products__item {
+    margin-right: 4px;
+}
+
+.delivery__img-container { 
+    position: relative;
+}
+
+.delivery__img__digit {
+    position: absolute;
+    padding: 0 5px;
+    top: -47px;
+    right: 3px;
+    font-size: 10px;
+    line-height: 16px;
+    border-radius: 10px;
+    color: var(--labels);
+    background-color: var(--orange);
+}
+
+.delivery__return {
+    display: flex;
+    position: relative;
+    font-size: 13px;
+    line-height: 16px;
+
+    @media (min-width: 426px) {    
+        padding: 6px 0;
+    }
+
+    @media (max-width: 425px) {
+        padding: 0 10px;
+    }
+
+    @media (min-width: 1025px) {
+        padding: 3px 0;
+    }
+}
+
+.delivery__return__free {
+    color: var(--green);
+}
+
+.delivery__return__add {
+    letter-spacing: 0;
+}
+
+.delivery__title-container {
+    @media (max-width: 425px) { 
+        margin-bottom: 11px;
+    }
+
+    @media (min-width: 426px) { 
+        margin-bottom: 17px;
+    }
+}
+
+.delivery__row {
+    @media (min-width: 426px) {  
+        display: flex;
+    }
+}
+
+.delivery__dates {
+    @media (max-width: 425px) { 
+        margin-bottom: 18px;
+    }
+
+    @media (min-width: 426px) {   
+        margin-bottom: 12px;
+    }
+
+    @media (min-width: 1025px) {
+        margin-bottom: 13px;
+    }
+}
+
+.delivery__return__free,
+.wb-info__icon {
+    cursor: url(./images/icons/cursor-pointer.svg) 5 5, pointer;
+}
+
+.wb-info {
+    @media (min-width: 426px) {    
+        margin-left: 6px;
+    }
+}
+
+.delivery__return__popup {
+    display: none;
+    position: absolute;
+    width: 288px;
+    height: 56px;
+    bottom: -144%;
+    right: 25%;
+    padding: 10px 16px 14px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px 0px #0000004D, 
+                0px 2px 10px 0px #00000026;
+    background-color: var(--labels);
+    z-index: 100;
+}
+
+.addition__info .delivery__return__popup {
+    bottom: -100%;
+    right: 7%;
+}
+
+.products__item--add {
+    padding-right: 7px;
+}
+
+.payment {
+    position: relative;
+    background-color: var(--labels);
+
+    @media (max-width: 425px) { 
+        padding: 0 16px;
+    }
+
+    @media (min-width: 426px) { 
+        padding: 0 24px;
+    }
+}
+
+.payment__card {
+    margin-right: 11px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.payment__header {
+    @media (max-width: 425px) { 
+        margin-bottom: 10px;
+    }
+
+    @media (min-width: 426px) {
+        margin-bottom: 17px;
+    }
+
+    @media (min-width: 1025px) {
+        margin-bottom: 18px;
+    }
+}
+
+.card-container {
+    max-height: 24px;
+    max-width: 32px;
+    background-color: var(--bg-main);
+}
+
+.payment__info {
+    display: flex;
+    @media (max-width: 425px) { 
+        margin-bottom: 5px;
+    }
+
+    @media (min-width: 426px) {  
+        margin-bottom: 10px;
+    }
+}
+
+.form__payment {
+    margin-bottom: 54px;
+}
+
+.payment__additional {
+    font-size: 13px;
+}
+
+.user-info {
+    position: relative;
+    padding: 0 16px;
+    background-color: var(--labels);
+
+    @media (min-width: 426px) {  
+        padding: 0px 23px;
+    }
+}
+
+.form__delivery {
+    @media (max-width: 425px) { 
+        margin-bottom: 55px;
+    }
+
+    @media (min-width: 426px) { 
+        margin-bottom: 50px;
+    }
+}
+
+.user__name .user__input,
+.user__contacts .user__input:not(:last-child) {
+    @media (max-width: 425px) { 
+        margin-bottom: 2.8em;
+    }
+}
+
+.user__input:not(:last-child) {
+    @media (min-width: 426px) { 
+        margin-right: 24px;
+    }
+}
+
+.delivery::before,
+.payment::before,
+.user-info::before {
+    @media (min-width: 426px) {    
+        height: 20px;
+    }
+}
+
+.payment::before,
+.delivery::before {
+    @media (min-width: 426px) {   
+        top: -16px;
+    }
+}
