@@ -59,7 +59,7 @@
 .checkbox:checked+.checkbox__label::before {
     border-color: var(--bg-checkbox);
     background-color: var(--bg-checkbox);
-    background-image: url("../images/icons/agree.svg");
+    background-image: url(./images/icons/agree.svg);
     background-size: 12px;
 }
 
